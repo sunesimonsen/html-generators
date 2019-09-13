@@ -195,4 +195,94 @@ describe("ElementGenerator", () => {
       }
     ]);
   });
+
+  describe("on a tag with required and ordered content", () => {
+    beforeEach(() => {
+      generator = new ElementGenerator({ tag: "fieldset" });
+    });
+
+    it("honors the required elements and the order", () => {
+      expect(generator.take(3), "to equal snapshot", [
+        {
+          type: "tag",
+          tag: "fieldset",
+          attributes: { dir: "rtl" },
+          children: [
+            {
+              type: "tag",
+              tag: "legend",
+              attributes: {},
+              children: [
+                { type: "text", value: "Maglas ka da ura." },
+                { type: "tag", tag: "math", attributes: {}, children: [] },
+                {
+                  type: "tag",
+                  tag: "noscript",
+                  attributes: { tabindex: "-434", dir: "rtl" },
+                  children: []
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          type: "tag",
+          tag: "fieldset",
+          attributes: { disabled: "", hidden: "", tabindex: "-15" },
+          children: [
+            {
+              type: "tag",
+              tag: "legend",
+              attributes: {
+                draggable: "false",
+                tabindex: "-388",
+                hidden: "",
+                dir: "rtl"
+              },
+              children: []
+            },
+            {
+              type: "tag",
+              tag: "svg",
+              attributes: {
+                draggable: "false",
+                hidden: "",
+                tabindex: "-962",
+                dir: "auto"
+              },
+              children: []
+            },
+            {
+              type: "tag",
+              tag: "pre",
+              attributes: { contenteditable: "" },
+              children: []
+            },
+            { type: "tag", tag: "aside", attributes: {}, children: [] },
+            {
+              type: "tag",
+              tag: "u",
+              attributes: { hidden: "", dir: "rtl", contenteditable: "false" },
+              children: []
+            }
+          ]
+        },
+        {
+          type: "tag",
+          tag: "fieldset",
+          attributes: {},
+          children: [
+            {
+              type: "tag",
+              tag: "legend",
+              attributes: { contenteditable: "false", draggable: "false" },
+              children: []
+            },
+            { type: "text", value: "Uhimo susde sev egizosde pitkedeb iva." }
+          ]
+        }
+      ]);
+    });
+  });
 });

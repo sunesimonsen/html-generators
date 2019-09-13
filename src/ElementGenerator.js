@@ -1,4 +1,10 @@
-const { categories, elementsByTag, elementsByCategory } = require("./elements");
+const {
+  categories,
+  categoryField,
+  elementsByCategory,
+  elementsByTag
+} = require("./elements");
+
 const Generator = require("chance-generators/lib/Generator");
 
 const generateTextFromRegep = (chance, regex) => {
@@ -63,18 +69,13 @@ class ElementGenerator extends Generator {
         : element.requiredContent) || []
     );
 
-    const children = Array.from(requiredContent) || [];
-
-    const numberOfChildren = chance.natural({ min, max });
-    let childrenLeft = Math.max(0, numberOfChildren - children.length);
-
     const permittedContent = (
       (element.transparent
         ? parentElement && parentElement.permittedContent
         : element.permittedContent) || categories
     ).map(item => {
-      const allowMultiple = item.endsWith("?");
-      const value = allowMultiple ? item.slice(0, -1) : item;
+      const allowMultiple = !item.endsWith("?");
+      const value = allowMultiple ? item : item.slice(0, -1);
 
       return {
         value,
@@ -83,6 +84,11 @@ class ElementGenerator extends Generator {
         allowMultiple
       };
     });
+
+    const children = Array.from(requiredContent) || [];
+
+    const numberOfChildren = chance.natural({ min, max });
+    let childrenLeft = Math.max(0, numberOfChildren - children.length);
 
     const contentCandidates = permittedContent.filter(
       ({ required, allowMultiple }) => allowMultiple || !required
@@ -96,7 +102,7 @@ class ElementGenerator extends Generator {
           (item.value === "@phrasing" || item.value === "@flow") &&
           chance.bool({ likelihood: 30 })
         ) {
-          children.push("@text");
+          children.push("#text");
         } else {
           children.push(chance.pickone(elementsByCategory[item.value]).tag);
         }
@@ -108,14 +114,27 @@ class ElementGenerator extends Generator {
       }
     }
 
-    console.log(tag, children);
+    const getOrder = tag =>
+      (permittedOrder || []).findIndex(item =>
+        item.startsWith("@")
+          ? elementsByTag[tag] && elementsByTag[tag][categoryField[item]]
+          : tag === item
+      );
+
+    console.log(
+      tag,
+      children.map(tag => ({
+        tag,
+        order: getOrder(tag)
+      }))
+    );
 
     return {
       type: "tag",
       tag,
       attributes,
       children: children.map(child =>
-        child === "@text"
+        child === "#text"
           ? {
               type: "text",
               value: chance.sentence({

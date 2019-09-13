@@ -54,6 +54,7 @@ const elementsByCategory = categories.reduce((result, category) => {
 module.exports = {
   elements,
   categories,
+  categoryField,
   elementsByTag,
   elementsByCategory
 };
