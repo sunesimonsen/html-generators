@@ -72,27 +72,39 @@ class ElementGenerator extends Generator {
       (element.transparent
         ? parentElement && parentElement.permittedContent
         : element.permittedContent) || categories
-    ).filter(
-      item => !item.endsWith("?") || !requiredContent.has(item.slice(0, -1))
+    ).map(item => {
+      const allowMultiple = item.endsWith("?");
+      const value = allowMultiple ? item.slice(0, -1) : item;
+
+      return {
+        value,
+        category: item.startsWith("@"),
+        required: requiredContent.has(value),
+        allowMultiple
+      };
+    });
+
+    const contentCandidates = permittedContent.filter(
+      ({ required, allowMultiple }) => allowMultiple || !required
     );
 
     for (var i = 0; i < childrenLeft; i += 1) {
-      const index = chance.natural({ max: permittedContent.length - 1 });
-      const item = permittedContent[index];
-      if (item.endsWith("?")) {
-        children.push(item.slice(0, -1));
-        permittedContent.splice(index, 1);
-      } else if (item.startsWith("@")) {
+      const index = chance.natural({ max: contentCandidates.length - 1 });
+      const item = contentCandidates[index];
+      if (item.category) {
         if (
-          (item === "@phrasing" || item === "@flow") &&
+          (item.value === "@phrasing" || item.value === "@flow") &&
           chance.bool({ likelihood: 30 })
         ) {
           children.push("@text");
         } else {
-          children.push(chance.pickone(elementsByCategory[item]).tag);
+          children.push(chance.pickone(elementsByCategory[item.value]).tag);
         }
+      } else if (item.allowMultiple) {
+        children.push(item.value);
       } else {
-        children.push(item);
+        children.push(item.value);
+        contentCandidates.splice(index, 1);
       }
     }
 
