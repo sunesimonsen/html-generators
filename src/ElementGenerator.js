@@ -28,16 +28,41 @@ const generateTextFromRegep = (chance, regex) => {
 const isRegex = value => value.startsWith("/");
 
 class ElementGenerator extends Generator {
-  constructor({ name = "element", tag, parentTag, min = 0, max = 5 } = {}) {
-    super(name, { tag, parentTag, min, max });
+  constructor({
+    excludedDescendants = new Set(),
+    max = 5,
+    min = 0,
+    name = "element",
+    parentTag,
+    tag
+  } = {}) {
+    super(name, { tag, parentTag, min, max, excludedDescendants });
 
-    this.options.element = elementsByTag[tag];
+    const element = elementsByTag[tag];
+    (element.permittedDescendants || []).forEach(({ exclude }) => {
+      if (typeof exclude === "string") {
+        excludedDescendants.add(exclude);
+      } else {
+        exclude.forEach(tag => {
+          excludedDescendants.add(tag);
+        });
+      }
+    });
 
+    this.options.excludedDescendants = excludedDescendants;
+    this.options.element = element;
     this.options.parentElement = parentTag && elementsByTag[parentTag];
   }
 
   generate(chance) {
-    const { element, parentElement, max, min, tag } = this.options;
+    const {
+      element,
+      excludedDescendants,
+      max,
+      min,
+      parentElement,
+      tag
+    } = this.options;
 
     const attributeNames = new Set(
       chance.pickset(
@@ -119,7 +144,11 @@ class ElementGenerator extends Generator {
         ) {
           children.push("#text");
         } else {
-          children.push(chance.pickone(elementsByCategory[item.value]).tag);
+          const possibleTags = elementsByCategory[item.value]
+            .map(({ tag }) => tag)
+            .filter(tag => !excludedDescendants.has(tag));
+
+          children.push(chance.pickone(possibleTags));
         }
       } else if (item.allowMultiple) {
         children.push(item.value);
@@ -190,7 +219,8 @@ class ElementGenerator extends Generator {
               parentTag: tag,
               tag: child,
               min,
-              max: chance.natural({ min, max })
+              max: chance.natural({ min, max }),
+              excludedDescendants: new Set(excludedDescendants)
             }).generate(chance)
       )
     };
