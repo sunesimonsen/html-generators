@@ -34,7 +34,7 @@ class ElementGenerator extends Generator {
     min = 0,
     name = "element",
     parentTag,
-    tag
+    tag = "html"
   } = {}) {
     super(name, { tag, parentTag, min, max, excludedDescendants });
 
