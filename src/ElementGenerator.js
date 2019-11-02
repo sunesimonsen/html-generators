@@ -14,7 +14,10 @@ const generateTextFromRegep = (chance, regex) => {
     case "/\\d+/":
       return String(chance.natural({ min: 0, max: 1000 }));
     case "/-?\\d+/":
-      return `-${chance.natural({ min: 0, max: 1000 })}`;
+      return `${chance.bool() ? "-" : ""}${chance.natural({
+        min: 0,
+        max: 1000
+      })}`;
     default:
       throw new Error(`Unknown regex: ${regex}`);
   }
@@ -27,6 +30,7 @@ class ElementGenerator extends Generator {
     super(name, { tag, parentTag, min, max });
 
     this.options.element = elementsByTag[tag];
+
     this.options.parentElement = parentTag && elementsByTag[parentTag];
   }
 
@@ -36,6 +40,7 @@ class ElementGenerator extends Generator {
     const { element, parentElement, max, min, tag } = this.options;
 
     const attributeNames = Object.keys(element.attributes);
+
     const attributes = chance
       .pickset(
         attributeNames,
@@ -91,10 +96,11 @@ class ElementGenerator extends Generator {
     let childrenLeft = Math.max(0, numberOfChildren - children.length);
 
     const contentCandidates = permittedContent.filter(
-      ({ required, allowMultiple }) => allowMultiple || !required
+      ({ value, required, allowMultiple, category }) =>
+        (allowMultiple || !required) && (category || elementsByTag[value])
     );
 
-    for (var i = 0; i < childrenLeft; i += 1) {
+    for (let i = 0; i < childrenLeft && 0 < contentCandidates.length; i += 1) {
       const index = chance.natural({ max: contentCandidates.length - 1 });
       const item = contentCandidates[index];
       if (item.category) {
@@ -114,26 +120,56 @@ class ElementGenerator extends Generator {
       }
     }
 
-    const getOrder = tag =>
-      (permittedOrder || []).findIndex(item =>
-        item.startsWith("@")
-          ? elementsByTag[tag] && elementsByTag[tag][categoryField[item]]
-          : tag === item
-      );
+    const getOrderIndexes = tag =>
+      (permittedOrder || [])
+        .map((item, i) => {
+          if (tag === "#text") {
+            return item === "@phrasing" || item === "@flow" ? i : -1;
+          }
 
-    console.log(
+          if (item.startsWith("@")) {
+            return elementsByTag[tag] && elementsByTag[tag][categoryField[item]]
+              ? i
+              : -1;
+          }
+
+          return tag === item ? i : -1;
+        })
+        .filter(i => i !== -1);
+
+    const getOrder = tag => {
+      const orderIndexes = getOrderIndexes(tag);
+      return orderIndexes.length > 0 ? chance.pickone(orderIndexes) : -1;
+    };
+
+    const childrenWithOrder = children.map(tag => ({
       tag,
-      children.map(tag => ({
-        tag,
-        order: getOrder(tag)
-      }))
-    );
+      order: getOrder(tag)
+    }));
+
+    // Bubble sort ordered children
+    for (let i = 0; i < children.length; i += 1) {
+      if (childrenWithOrder[i].order !== -1) {
+        for (let j = i + 1; j < children.length; j += 1) {
+          if (
+            childrenWithOrder[j].order !== -1 &&
+            childrenWithOrder[j].order < childrenWithOrder[i].order
+          ) {
+            const tmp = childrenWithOrder[i];
+            childrenWithOrder[i] = childrenWithOrder[j];
+            childrenWithOrder[j] = tmp;
+          }
+        }
+      }
+    }
+
+    const orderedChildren = childrenWithOrder.map(({ tag }) => tag);
 
     return {
       type: "tag",
       tag,
       attributes,
-      children: children.map(child =>
+      children: orderedChildren.map(child =>
         child === "#text"
           ? {
               type: "text",
