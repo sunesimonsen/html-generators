@@ -23,82 +23,61 @@ describe("ElementGenerator", () => {
       {
         type: 'tag',
         tag: 'small',
-        attributes: {},
-        children: [ { type: 'text', value: 'Bagohrak ro celel taj sibsof buunu.' }, { type: 'tag', tag: 'script', attributes: { contenteditable: '', src: '^CtnX3x', draggable: 'false' }, children: [] } ]
+        attributes: { hidden: '' },
+        children: [ { type: 'text', value: 'Gu jom be mabuj do lisib valbuunu.' }, { type: 'tag', tag: 'sub', attributes: { contenteditable: '' }, children: [] } ]
       },
+      { type: 'tag', tag: 'button', attributes: { hidden: '', type: 'button' }, children: [] },
+      { type: 'text', value: 'Bawha kimri uv okonokan cuh.' },
+      { type: 'text', value: 'Jitluh jahfab zejaaf woscujduv neclekos junla esohogbi.' },
       {
         type: 'tag',
-        tag: 'button',
-        attributes: { dir: 'auto', contenteditable: 'false', autofocus: '', tabindex: '727' },
+        tag: 'i',
+        attributes: { contenteditable: '' },
         children: [
+          { type: 'text', value: 'Pow si gewse iwahoil.' },
           {
             type: 'tag',
-            tag: 'cite',
-            attributes: {},
+            tag: 'q',
+            attributes: { contenteditable: 'true' },
             children: [
-              {
-                type: 'tag',
-                tag: 'input',
-                children: [],
-                attributes: { disabled: '', tabindex: '395', required: '', hidden: '', capture: '', autofocus: '', draggable: 'true', dir: 'ltr', type: 'button', spellcheck: 'true', contenteditable: '', inputmode: 'search' }
-              },
-              { type: 'text', value: 'Zoclodevo dako wip rij wus hogbimab.' }
+              { type: 'tag', tag: 'embed', children: [], attributes: { hidden: '', src: '8A@wamLNE', title: 'itys' } },
+              { type: 'text', value: 'Pi lahugwi febenpib.' },
+              { type: 'tag', tag: 'embed', children: [], attributes: { draggable: 'false', src: 'YkNKH[OrRXf4B', title: '7BIU[' } },
+              { type: 'text', value: 'Dovki bun har hepgu.' }
             ]
           }
         ]
-      },
-      { type: 'text', value: 'Bu kivud mis oc.' },
-      { type: 'text', value: 'Fuw jocnuf iv adlew ho.' },
-      {
-        type: 'tag', tag: 'i', attributes: {},
-        children: [ { type: 'tag', tag: 'em', attributes: { draggable: 'true', dir: 'rtl' }, children: [] }, { type: 'text', value: 'Hi mechug poh ub umi je hodpizhir.' } ]
       }
     ]
   },
   {
     type: 'tag',
     tag: 'code',
-    attributes: {},
+    attributes: { dir: 'rtl' },
     children: [
-      { type: 'text', value: 'Avkiwa kofwihep or pufoj guireva.' },
+      { type: 'tag', tag: 'br', children: [], attributes: { tabindex: '258' } },
       {
         type: 'tag',
-        tag: 'strong',
-        attributes: { draggable: 'false', tabindex: '-966', dir: 'rtl', contenteditable: 'false' },
+        tag: 'select',
+        attributes: { required: '' },
         children: [
-          { type: 'text', value: 'Ipuod vonlavub ki nozgo pe los vendijjeg.' },
-          { type: 'text', value: 'Miwtitpo pufwi bop uw juvza.' },
-          {
-            type: 'tag',
-            tag: 'script',
-            attributes: { hidden: '', tabindex: '-191', nomodule: '', defer: '', integrity: 'xJmBPD*!Z', async: '', crossorigin: 'anonymous', src: 'hpTX]A', contenteditable: '', draggable: 'false' },
-            children: [ { type: 'tag', tag: 'meta', children: [], attributes: { hidden: '', contenteditable: 'true', draggable: 'true', dir: 'ltr' } } ]
-          },
-          {
-            type: 'tag',
-            tag: 'svg',
-            attributes: { tabindex: '-511', dir: 'rtl' },
-            children: [
-              { type: 'tag', tag: 'article', attributes: { tabindex: '-438', dir: 'auto', contenteditable: '', draggable: 'true' }, children: [] },
-              { type: 'text', value: 'Junbeb jem.' },
-              { type: 'tag', tag: 'span', attributes: { draggable: 'false' }, children: [] }
-            ]
-          }
+          { type: 'tag', tag: 'script', attributes: { src: '%P' }, children: [ { type: 'text', value: 'Wo eviipuod vonlavub ki.' } ] },
+          { type: 'tag', tag: 'script', attributes: { tabindex: '995' }, children: [] },
+          { type: 'tag', tag: 'script', attributes: { draggable: 'true' }, children: [] }
         ]
       },
-      { type: 'tag', tag: 'progress', attributes: { tabindex: '457' }, children: [ { type: 'text', value: 'Wodfuz katji cebuc wocafig dof.' } ] },
-      {
-        type: 'tag',
-        tag: 'input',
-        children: [],
-        attributes: {
-          tabindex: '-758', disabled: '', required: '', capture: '', spellcheck: 'default', readonly: '', type: 'hidden', hidden: '', multiple: '', inputmode: 'none', draggable: 'true', contenteditable: '',
-          checked: '', dir: 'ltr'
-        }
-      }
+      { type: 'text', value: 'Towohram jeguze ipilip.' }
     ]
   },
-  { type: 'tag', tag: 'code', attributes: {}, children: [ { type: 'tag', tag: 'samp', attributes: { contenteditable: 'true', tabindex: '-173' }, children: [] } ] }
+  {
+    type: 'tag',
+    tag: 'code',
+    attributes: { hidden: '' },
+    children: [
+      { type: 'text', value: 'Zogu ohijoow ru.' },
+      { type: 'tag', tag: 'mark', attributes: { tabindex: '75' }, children: [ { type: 'text', value: 'Pa muvona to fejuhera lihakhup patofcok ivbedin.' } ] }
+    ]
+  }
 ]);
   });
 
@@ -112,90 +91,56 @@ describe("ElementGenerator", () => {
   {
     type: 'tag',
     tag: 'figure',
-    attributes: { dir: 'auto', contenteditable: '', tabindex: '-374' },
+    attributes: { contenteditable: '' },
     children: [
+      { type: 'tag', tag: 'video', attributes: { contenteditable: 'false' }, children: [] },
+      { type: 'tag', tag: 'nav', attributes: { contenteditable: '' }, children: [ { type: 'tag', tag: 'em', attributes: { hidden: '' }, children: [] } ] }
+    ]
+  },
+  {
+    type: 'tag',
+    tag: 'figure',
+    attributes: { tabindex: '-194' },
+    children: [ { type: 'tag', tag: 'br', children: [], attributes: { draggable: 'false' } }, { type: 'tag', tag: 'figcaption', attributes: { hidden: '' }, children: [] } ]
+  },
+  {
+    type: 'tag',
+    tag: 'figure',
+    attributes: { draggable: 'true' },
+    children: [
+      { type: 'tag', tag: 'figcaption', attributes: { contenteditable: 'true' }, children: [] },
+      { type: 'text', value: 'Waoho womtoce fobe.' },
+      { type: 'text', value: 'Da ura.' },
+      { type: 'tag', tag: 'hr', children: [], attributes: { contenteditable: 'false' } }
+    ]
+  },
+  {
+    type: 'tag',
+    tag: 'figure',
+    attributes: { tabindex: '-346' },
+    children: [
+      { type: 'tag', tag: 'h6', attributes: { dir: 'ltr' }, children: [] },
       {
         type: 'tag',
-        tag: 'figcaption',
-        attributes: { tabindex: '801', contenteditable: 'false', draggable: 'true' },
+        tag: 'u',
+        attributes: { draggable: 'false' },
         children: [
-          { type: 'text', value: 'Tufjade do colubet pa.' },
-          {
-            type: 'tag',
-            tag: 'map',
-            attributes: { dir: 'auto', draggable: 'true', hidden: '' },
-            children: [
-              { type: 'text', value: 'Lesev egizosde pitkedeb iva uzoli cicse.' },
-              { type: 'text', value: 'Zuzodol umnorer fos ecumoce waccezluj.' },
-              {
-                type: 'tag',
-                tag: 'math',
-                attributes: { dir: 'ltr', display: 'inline', tabindex: '-482', hidden: '', overflow: 'scroll' },
-                children: [
-                  { type: 'tag', tag: 'datalist', attributes: { draggable: 'false', dir: 'ltr' }, children: [] },
-                  { type: 'tag', tag: 'meta', children: [], attributes: { contenteditable: 'false', hidden: '', dir: 'rtl' } }
-                ]
-              },
-              { type: 'tag', tag: 'wbr', children: [], attributes: { draggable: 'false', dir: 'rtl', hidden: '', contenteditable: '' } }
-            ]
-          },
-          {
-            type: 'tag',
-            tag: 'object',
-            attributes: { tabindex: '-892', contenteditable: 'true', hidden: '', draggable: 'false', dir: 'auto' },
-            children: [
-              { type: 'text', value: 'Tejiz sewcuh.' },
-              {
-                type: 'tag',
-                tag: 'var',
-                attributes: { contenteditable: 'true', hidden: '', dir: 'rtl', tabindex: '-169' },
-                children: [ { type: 'tag', tag: 'iframe', attributes: { dir: 'rtl', contenteditable: 'false', src: 'NuwE8' }, children: [] } ]
-              }
-            ]
-          }
-        ]
-      },
-      { type: 'tag', tag: 'svg', attributes: {}, children: [] },
-      {
-        type: 'tag',
-        tag: 'pre',
-        attributes: {},
-        children: [
-          { type: 'tag', tag: 'ins', attributes: {}, children: [] },
-          { type: 'tag', tag: 'picture', attributes: { dir: 'auto', hidden: '' }, children: [] },
-          { type: 'tag', tag: 'b', attributes: { hidden: '', dir: 'auto' }, children: [ { type: 'text', value: 'Fe cu rusomiwus hegaog.' } ] },
-          {
-            type: 'tag',
-            tag: 'svg',
-            attributes: { dir: 'auto' },
-            children: [ { type: 'tag', tag: 'nav', attributes: {}, children: [] }, { type: 'tag', tag: 'iframe', attributes: { hidden: '', draggable: 'false' }, children: [] } ]
-          }
+          { type: 'tag', tag: 'button', attributes: { tabindex: '941', type: 'reset' }, children: [] },
+          { type: 'text', value: 'Ditawo upuge de do.' },
+          { type: 'tag', tag: 'u', attributes: { contenteditable: 'true' }, children: [ { type: 'tag', tag: 's', attributes: { tabindex: '-282' }, children: [] } ] }
         ]
       }
     ]
   },
-  { type: 'tag', tag: 'figure', attributes: { tabindex: '-590', draggable: 'true' }, children: [] },
-  { type: 'tag', tag: 'figure', attributes: { hidden: '', tabindex: '213' }, children: [] },
   {
     type: 'tag',
     tag: 'figure',
-    attributes: { contenteditable: 'true', hidden: '', dir: 'rtl' },
+    attributes: { hidden: '' },
     children: [
-      {
-        type: 'tag',
-        tag: 'figcaption',
-        attributes: { dir: 'rtl' },
-        children: [
-          { type: 'tag', tag: 'u', attributes: { dir: 'rtl', contenteditable: 'true', tabindex: '-329' }, children: [ { type: 'text', value: 'Did mataf munirfof af.' } ] },
-          { type: 'text', value: 'Ga dil ijpe baporpu.' },
-          { type: 'tag', tag: 'sub', attributes: { dir: 'auto', contenteditable: '', hidden: '', draggable: 'false' }, children: [] }
-        ]
-      },
-      { type: 'text', value: 'Repeplil cadfoivi bavliha.' },
-      { type: 'tag', tag: 'map', attributes: { dir: 'auto', contenteditable: '', hidden: '' }, children: [] }
+      { type: 'tag', tag: 'area', children: [], attributes: { dir: 'rtl' } },
+      { type: 'tag', tag: 'figcaption', attributes: { hidden: '' }, children: [ { type: 'tag', tag: 'wbr', children: [], attributes: { contenteditable: 'true' } } ] }
     ]
-  },
-  { type: 'tag', tag: 'figure', attributes: { draggable: 'true' }, children: [ { type: 'tag', tag: 'figcaption', attributes: { hidden: '', dir: 'rtl' }, children: [] } ] }
+  }
 ]);
     });
   });

@@ -9,8 +9,10 @@ const Generator = require("chance-generators/lib/Generator");
 
 const generateTextFromRegep = (chance, regex) => {
   switch (regex) {
+    case "/.*/":
+      return chance.string({ length: chance.natural({ min: 0, max: 20 }) });
     case "/.+/":
-      return chance.string();
+      return chance.string({ length: chance.natural({ min: 1, max: 20 }) });
     case "/\\d+/":
       return String(chance.natural({ min: 0, max: 1000 }));
     case "/-?\\d+/":
@@ -35,19 +37,24 @@ class ElementGenerator extends Generator {
   }
 
   generate(chance) {
-    // TODO honour required attributes
-
     const { element, parentElement, max, min, tag } = this.options;
 
-    const attributeNames = Object.keys(element.attributes);
-
-    const attributes = chance
-      .pickset(
-        attributeNames,
-        chance.natural({ max: attributeNames.length - 1 })
+    const attributeNames = new Set(
+      chance.pickset(
+        Object.keys(element.attributes),
+        chance.natural({ max: element.attributes.length - 1 })
       )
-      .reduce((result, attributeName) => {
-        const attributeValues = element.attributes[attributeName].map(value =>
+    );
+
+    (element.requiredAttributes || []).forEach(attribute => {
+      attributeNames.add(attribute);
+    });
+
+    const attributes = Array.from(attributeNames).reduce(
+      (result, attributeName) => {
+        const attributeValues = (
+          element.attributes[attributeName] || ["/.*/"]
+        ).map(value =>
           isRegex(value) ? generateTextFromRegep(chance, value) : value
         );
 
@@ -58,7 +65,9 @@ class ElementGenerator extends Generator {
         }
 
         return result;
-      }, {});
+      },
+      {}
+    );
 
     if (element.void) {
       return { type: "tag", tag, children: [], attributes };
