@@ -112,17 +112,19 @@ class ElementGenerator extends Generator {
       (element.transparent
         ? parentElement && parentElement.permittedContent
         : element.permittedContent) || categories
-    ).map(item => {
-      const allowMultiple = !item.endsWith("?");
-      const value = allowMultiple ? item : item.slice(0, -1);
+    )
+      .filter(item => !excludedDescendants.has(item))
+      .map(item => {
+        const allowMultiple = !item.endsWith("?");
+        const value = allowMultiple ? item : item.slice(0, -1);
 
-      return {
-        value,
-        category: item.startsWith("@"),
-        required: requiredContent.has(value),
-        allowMultiple
-      };
-    });
+        return {
+          value,
+          category: item.startsWith("@"),
+          required: requiredContent.has(value),
+          allowMultiple
+        };
+      });
 
     const children = Array.from(requiredContent) || [];
 
