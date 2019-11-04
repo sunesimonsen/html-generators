@@ -150,6 +150,8 @@ class ElementGenerator extends Generator {
 
           children.push(chance.pickone(possibleTags));
         }
+      } else if (excludedDescendants.has(item.tag)) {
+        contentCandidates.splice(index, 1);
       } else if (item.allowMultiple) {
         children.push(item.value);
       } else {
