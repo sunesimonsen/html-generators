@@ -1,10 +1,41 @@
 const expect = require("unexpected")
   .clone()
-  .use(require("unexpected-snapshot"));
+  .use(require("unexpected-snapshot"))
+  .use(require("magicpen-prism"));
 
+const stringify = require("./stringify");
 const { elementsByTag } = require("./elements");
 
 const ElementGenerator = require("./ElementGenerator.js");
+
+function containsElement(html, elementName) {
+  if (html.type === "tag") {
+    return (
+      html.tag === elementName ||
+      html.children.some(child => containsElement(child, elementName))
+    );
+  } else {
+    return false;
+  }
+}
+
+expect.addAssertion(
+  "<object> [not] to contain element <string>",
+  (expect, html, elementName) => {
+    expect.subjectOutput = output => output.code(stringify(html), "html");
+    expect.argsOutput[0] = output =>
+      output.code(
+        stringify({
+          type: "tag",
+          tag: elementName,
+          attributes: [],
+          children: []
+        }),
+        "html"
+      );
+    expect(containsElement(html, elementName), "[not] to be true");
+  }
+);
 
 describe("ElementGenerator", () => {
   let generator;
@@ -281,6 +312,20 @@ describe("ElementGenerator", () => {
           ]
         }
       ]);
+    });
+  });
+
+  describe("with excludedDescendants", function() {
+    beforeEach(() => {
+      generator = new ElementGenerator({
+        excludedDescendants: new Set(["script"])
+      });
+    });
+
+    it("does not generate that element", function() {
+      for (const html of generator.take(100)) {
+        expect(html, "not to contain element", "script");
+      }
     });
   });
 });
