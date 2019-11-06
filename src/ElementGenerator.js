@@ -129,14 +129,14 @@ class ElementGenerator extends Generator {
     const children = Array.from(requiredContent) || [];
 
     const numberOfChildren = chance.natural({ min, max });
-    let childrenLeft = Math.max(0, numberOfChildren - children.length);
+    const childrenLeft = Math.max(0, numberOfChildren - children.length);
 
     const contentCandidates = permittedContent.filter(
       ({ value, required, allowMultiple, category }) =>
         (allowMultiple || !required) && (category || elementsByTag[value])
     );
 
-    for (let i = 0; i < childrenLeft && 0 < contentCandidates.length; i += 1) {
+    for (let i = 0; i < childrenLeft && contentCandidates.length > 0; i += 1) {
       const index = chance.natural({ max: contentCandidates.length - 1 });
       const item = contentCandidates[index];
       if (item.category) {
