@@ -4,7 +4,7 @@
   "description": "HTML random generators",
   "main": "./src/index.js",
   "scripts": {
-    "test": "mocha src/**/*.spec.js",
+    "test": "mocha",
     "lint": "eslint .",
     "coverage": "NODE_ENV=development nyc --reporter=lcov --reporter=text --all -- npm test && echo google-chrome coverage/lcov-report/index.html",
     "ci": "npm run coverage && npm run lint && prettier --check '**/*.js'"
