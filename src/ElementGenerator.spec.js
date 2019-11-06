@@ -4,7 +4,6 @@ const expect = require("unexpected")
   .use(require("magicpen-prism"));
 
 const stringify = require("./stringify");
-const { elementsByTag } = require("./elements");
 
 const ElementGenerator = require("./ElementGenerator.js");
 
