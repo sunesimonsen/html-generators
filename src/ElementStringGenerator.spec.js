@@ -15,9 +15,9 @@ describe("ElementStringGenerator", () => {
 
   it("generates elements of the given type as HTML a string", () => {
     expect(generator.take(3), "to equal snapshot", [
-      '<code hidden=""><u dir="ltr"><mark dir="ltr"></mark></u><datalist dir="ltr"></datalist><slot tabindex="-355"><var dir="auto"><span draggable="true"></span>Lodfostuc moceira cez ejagu sojwaze mewdi.<video contenteditable="true"></video></var><mark hidden=""></mark>Tos hukneem ut una biw cemucite.Up lusohocu doja nej jaj ulbihmu.<i dir="ltr"></i></slot></code>',
-      '<code contenteditable="false"><script tabindex="-778"></script><time contenteditable="true"><input capture="" type="color"></input><sup contenteditable=""><meter tabindex="555"><slot dir="ltr"></slot></meter></sup><audio dir="auto"></audio></time>Ir cegbopi pevrunit fibzo wuffob.<svg hidden=""><noscript draggable="true"><meta hidden=""></meta><h4 contenteditable="true"><small tabindex="493"></small>Hecdid mataf munirfof.</h4></noscript><audio tabindex="-345"></audio><style contenteditable="true"></style></svg>Gudi kac topuoj ju ziuflul.</code>',
-      '<code hidden=""><label tabindex="512">Delab efki ij vetil ron.<iframe hidden="" title="jCuyA%VSQ"></iframe></label><audio dir="rtl">Pagah cucammo.Ikuwuaz fo orisihzef wipora zecpawki lefi ufe.</audio>Habodnin lawesu osofa ossav etgodfat tiw.Ser noiljis sejmem igrak.</code>'
-    ]);
+  '<code draggable="true"><noscript tabindex="-528">Doamra fowo soddorgah tahikjed gutgo ni.</noscript><u draggable="false"><br tabindex="923"></br></u><kbd dir="auto">Babtocka kifjelni zaevda ese.<embed hidden="" src="6cDdF9Ci1d" title="!sthFDcTH"></embed></kbd><del draggable="false"><picture dir="ltr"></picture></del></code>',
+  '<code hidden=""><video draggable="true">Diim rake pic dubume vabmuvkab zukim irjah.<bdo dir="rtl"></bdo></video><math draggable="false"><h4 hidden=""></h4></math>Wo uhnenu gagesmun kanejub.<dfn draggable="true"></dfn><s hidden="">Lawjogo owubo kak jeoz.<cite contenteditable="false"><img crossorigin="anonymous" src="!n2(OqWyu3RDK"></img></cite><u dir="auto"></u></s></code>',
+  '<code tabindex="-230"><canvas contenteditable="true"><output hidden="">Hawfot loz pi nojrorniw.Nu vavulidi wu huraaz.</output><s draggable="true"><svg hidden=""></svg></s>Jot gefalu bupecu.</canvas></code>'
+]);
   });
 });
