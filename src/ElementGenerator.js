@@ -113,7 +113,7 @@ class ElementGenerator extends Generator {
         ? parentElement && parentElement.permittedContent
         : element.permittedContent) || categories
     )
-      .filter(item => !excludedDescendants.has(item))
+      .filter(item => !excludedDescendants.has(item.replace(/\?$/, "")))
       .map(item => {
         const allowMultiple = !item.endsWith("?");
         const value = allowMultiple ? item : item.slice(0, -1);
