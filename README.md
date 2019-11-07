@@ -18,7 +18,7 @@ console.log(htmlString.first());
 
 ## Example with unexpected-check
 
-Quick example that check that
+Check that
 [html-minifier](https://github.com/kangax/html-minifier) always produces shorter
 output:
 
