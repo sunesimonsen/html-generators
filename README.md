@@ -4,7 +4,7 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/sunesimonsen/html-generators/badge.svg?branch=master)](https://coveralls.io/github/sunesimonsen/html-generators?branch=master)
 
-HTML generator based on [chance-generators](https://github.com/sunesimonsen/chance-generators/), intended for use in property based tests with [unexpected-check](https://unexpected.js.org/unexpected-check/).
+HTML generator based on [chance-generators](https://github.com/sunesimonsen/chance-generators/), intended for use in property based tests with [unexpected-check](https://unexpected.js.org/unexpected-check/) or [unchecked](https://github.com/unexpectedjs/unchecked).
 
 ```js
 const { htmlString } = require("html-generators");
