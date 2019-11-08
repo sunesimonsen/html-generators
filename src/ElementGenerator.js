@@ -94,7 +94,7 @@ class ElementGenerator extends Generator {
         );
 
         if (attributeValues.length === 0) {
-          result[attributeName] = "";
+          result[attributeName] = null;
         } else {
           result[attributeName] = chance.pickone(attributeValues);
         }
@@ -173,6 +173,10 @@ class ElementGenerator extends Generator {
         children.push(item.value);
         contentCandidates.splice(index, 1);
       }
+    }
+
+    if (contentCandidates.length === 0 && children.length === 0) {
+      children.push("#text");
     }
 
     const getOrderIndexes = tag =>
