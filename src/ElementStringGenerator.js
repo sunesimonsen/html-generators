@@ -1,8 +1,10 @@
+const Generator = require("chance-generators/lib/Generator");
 const ElementGenerator = require("./ElementGenerator");
 const stringify = require("./stringify");
 
-class ElementStringGenerator {
+class ElementStringGenerator extends Generator {
   constructor(options = {}) {
+    super("element", options);
     this.parentGenerator = new ElementGenerator(options).map(stringify);
 
     [
