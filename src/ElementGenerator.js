@@ -73,10 +73,11 @@ class ElementGenerator extends Generator {
       tag
     } = this.options;
 
+    const possibleElementAttributes = Object.keys(element.attributes);
     const attributeNames = new Set(
       chance.pickset(
-        Object.keys(element.attributes),
-        chance.natural({ max: element.attributes.length - 1 })
+        possibleElementAttributes,
+        chance.natural({ max: possibleElementAttributes.length - 1 })
       )
     );
 
