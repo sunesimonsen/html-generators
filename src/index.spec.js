@@ -25,223 +25,43 @@ describe("html", () => {
 
   it("generates random HTML trees", () => {
     expect(html.first(), "to equal snapshot", {
-      type: "tag",
-      tag: "html",
-      attributes: { hidden: null, lang: "25SSlGlheH#ySk0Wbe)" },
+  type: 'tag',
+  tag: 'html',
+  attributes: { hidden: null, lang: '25SSlGlheH#ySk0Wbe)' },
+  children: [
+    {
+      type: 'tag',
+      tag: 'head',
+      attributes: {},
+      children: [ { type: 'tag', tag: 'title', attributes: { contenteditable: '', draggable: 'true', tabindex: '-291', dir: 'rtl' }, children: [ { type: 'text', value: 'Uj do.' } ] } ]
+    },
+    {
+      type: 'tag',
+      tag: 'body',
+      attributes: { contenteditable: 'true', dir: 'ltr', hidden: null },
       children: [
+        { type: 'tag', tag: 'canvas', attributes: { dir: 'ltr' }, children: [] },
+        { type: 'tag', tag: 'a', attributes: { hidden: null }, children: [] },
         {
-          type: "tag",
-          tag: "head",
-          attributes: {},
-          children: [
-            {
-              type: "tag",
-              tag: "title",
-              attributes: {
-                contenteditable: "",
-                draggable: "true",
-                tabindex: "-291",
-                dir: "rtl"
-              },
-              children: [{ type: "text", value: "Uj do." }]
-            }
-          ]
+          type: 'tag',
+          tag: 'video',
+          attributes: { contenteditable: 'false', hidden: null, dir: 'rtl', draggable: 'true' },
+          children: [ { type: 'tag', tag: 'embed', children: [], attributes: { hidden: null, dir: 'auto', src: 'H*D%&S1&ygQoMd)y!', title: 'N9RA)uSOukv7mfb' } } ]
         },
+        { type: 'tag', tag: 'title', attributes: { hidden: null, dir: 'ltr' }, children: [ { type: 'text', value: 'Woscujduv neclekos junla.' } ] },
         {
-          type: "tag",
-          tag: "body",
-          attributes: { contenteditable: "true", dir: "ltr", hidden: null },
+          type: 'tag',
+          tag: 'select',
+          attributes: { multiple: null, size: '523', disabled: null, autofocus: null, hidden: null, dir: 'rtl', required: null, contenteditable: '', draggable: 'true' },
           children: [
-            {
-              type: "tag",
-              tag: "canvas",
-              attributes: { dir: "ltr" },
-              children: []
-            },
-            {
-              type: "tag",
-              tag: "a",
-              attributes: { hidden: null },
-              children: [
-                {
-                  type: "tag",
-                  tag: "h5",
-                  attributes: {},
-                  children: [
-                    {
-                      type: "tag",
-                      tag: "abbr",
-                      attributes: { hidden: null, dir: "rtl", tabindex: "185" },
-                      children: [
-                        {
-                          type: "tag",
-                          tag: "keygen",
-                          children: [],
-                          attributes: { contenteditable: "false", hidden: null }
-                        },
-                        {
-                          type: "tag",
-                          tag: "textarea",
-                          attributes: {
-                            disabled: null,
-                            required: null,
-                            wrap: "hard",
-                            tabindex: "395"
-                          },
-                          children: [{ type: "text", value: "Gor zoclodevo." }]
-                        },
-                        {
-                          type: "tag",
-                          tag: "script",
-                          attributes: {
-                            hidden: null,
-                            contenteditable: "",
-                            nomodule: null,
-                            draggable: "false"
-                          },
-                          children: []
-                        },
-                        {
-                          type: "tag",
-                          tag: "b",
-                          attributes: { dir: "auto", contenteditable: "false" },
-                          children: []
-                        },
-                        { type: "text", value: "Pawicna ip riide." }
-                      ]
-                    },
-                    {
-                      type: "tag",
-                      tag: "input",
-                      children: [],
-                      attributes: {
-                        capture: null,
-                        checked: null,
-                        inputmode: "decimal",
-                        draggable: "false",
-                        readonly: null,
-                        required: null,
-                        contenteditable: "",
-                        tabindex: "456",
-                        multiple: null,
-                        type: "datetime-local"
-                      }
-                    },
-                    { type: "text", value: "Imeduj deg bueh." }
-                  ]
-                }
-              ]
-            },
-            { type: "tag", tag: "video", attributes: {}, children: [] },
-            {
-              type: "tag",
-              tag: "title",
-              attributes: { draggable: "true", dir: "ltr" },
-              children: [{ type: "text", value: "Kerokcu her jahben." }]
-            },
-            {
-              type: "tag",
-              tag: "select",
-              attributes: {
-                autofocus: null,
-                hidden: null,
-                contenteditable: "",
-                multiple: null,
-                dir: "rtl",
-                size: "489",
-                required: null,
-                tabindex: "553",
-                disabled: null
-              },
-              children: [
-                {
-                  type: "tag",
-                  tag: "script",
-                  attributes: {
-                    draggable: "false",
-                    src: "9l",
-                    crossorigin: "anonymous",
-                    integrity: "d@Ry"
-                  },
-                  children: [
-                    {
-                      type: "tag",
-                      tag: "picture",
-                      attributes: { tabindex: "-941", contenteditable: "true" },
-                      children: [
-                        {
-                          type: "tag",
-                          tag: "script",
-                          attributes: {
-                            dir: "ltr",
-                            crossorigin: "anonymous",
-                            hidden: null,
-                            async: null,
-                            contenteditable: "",
-                            src: "PMNtr]g)%P%$Unzuz",
-                            tabindex: "847",
-                            draggable: "false",
-                            integrity: "5$V!g*l6%XSQaBh*X["
-                          },
-                          children: []
-                        },
-                        {
-                          type: "tag",
-                          tag: "template",
-                          attributes: {},
-                          children: []
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  type: "tag",
-                  tag: "option",
-                  attributes: {
-                    hidden: null,
-                    tabindex: "18",
-                    draggable: "true"
-                  },
-                  children: [{ type: "text", value: "Towohram jeguze ipilip." }]
-                },
-                {
-                  type: "tag",
-                  tag: "template",
-                  attributes: { hidden: null, dir: "auto" },
-                  children: [
-                    {
-                      type: "tag",
-                      tag: "address",
-                      attributes: {},
-                      children: [
-                        {
-                          type: "tag",
-                          tag: "ins",
-                          attributes: {
-                            dir: "ltr",
-                            hidden: null,
-                            draggable: "false",
-                            contenteditable: "false"
-                          },
-                          children: []
-                        }
-                      ]
-                    },
-                    {
-                      type: "tag",
-                      tag: "nav",
-                      attributes: { draggable: "false", hidden: null },
-                      children: []
-                    }
-                  ]
-                }
-              ]
-            }
+            { type: 'tag', tag: 'option', attributes: {}, children: [ { type: 'text', value: 'Riide rohu jod tuhdulhak retijic.' } ] },
+            { type: 'tag', tag: 'option', attributes: { dir: 'rtl' }, children: [ { type: 'text', value: 'Ehfimif jeofhi.' } ] }
           ]
         }
       ]
-    });
+    }
+  ]
+});
   });
 });
 
@@ -252,12 +72,12 @@ describe("htmlString", () => {
 
   it("generates random HTML strings", () => {
     expect(htmlString.take(5), "to equal snapshot", [
-      '<html hidden lang="25SSlGlheH#ySk0Wbe)"><head><title contenteditable="" draggable="true" tabindex="-291" dir="rtl">Uj do.</title></head><body contenteditable="true" dir="ltr" hidden><canvas dir="ltr"></canvas><a hidden><h5><abbr hidden dir="rtl" tabindex="185"><keygen contenteditable="false" hidden></keygen><textarea disabled required wrap="hard" tabindex="395">Gor zoclodevo.</textarea><script hidden contenteditable="" nomodule draggable="false"></script><b dir="auto" contenteditable="false"></b>Pawicna ip riide.</abbr><input capture checked inputmode="decimal" draggable="false" readonly required contenteditable="" tabindex="456" multiple type="datetime-local"></input>Imeduj deg bueh.</h5></a><video></video><title draggable="true" dir="ltr">Kerokcu her jahben.</title><select autofocus hidden contenteditable="" multiple dir="rtl" size="489" required tabindex="553" disabled><script draggable="false" src="9l" crossorigin="anonymous" integrity="d@Ry"><picture tabindex="-941" contenteditable="true"><script dir="ltr" crossorigin="anonymous" hidden async contenteditable="" src="PMNtr]g)%P%$Unzuz" tabindex="847" draggable="false" integrity="5$V!g*l6%XSQaBh*X["></script><template></template></picture></script><option hidden tabindex="18" draggable="true">Towohram jeguze ipilip.</option><template hidden dir="auto"><address><ins dir="ltr" hidden draggable="false" contenteditable="false"></ins></address><nav draggable="false" hidden></nav></template></select></body></html>',
-      '<html dir="rtl" lang="txJm"><head hidden tabindex="-615" dir="auto" contenteditable="true"><title draggable="true">Warlihak epcibtof wecuv.</title></head><body contenteditable="true"><img tabindex="286" src="cscc8wANjyM9"></img><abbr dir="auto">Fodumobo miceb cuk maffigra vutuwom.Maglas ka da ura.<ins contenteditable="true" tabindex="-173"><area contenteditable="true" dir="rtl" tabindex="539" shape="poly" hidden></area><progress><q tabindex="128" draggable="false" hidden contenteditable="true"></q>Azifa ga bavec lubet pa lowbokuhi zi.<q draggable="true" hidden tabindex="-777" contenteditable="true"></q></progress></ins></abbr><h3 draggable="false" hidden contenteditable="false" tabindex="238"><mark dir="auto"></mark><input contenteditable="true" type="checkbox" required multiple inputmode="numeric"></input></h3></body></html>',
-      '<html lang="yOXp3("><head><title tabindex="143" draggable="false" dir="auto">Cir mu famhuluj huwsojwa lirhu mi mi.</title><base contenteditable="false" draggable="false"></base><base hidden draggable="true" dir="rtl"></base><script hidden contenteditable="true" defer tabindex="-323" dir="ltr"><title contenteditable="false" draggable="true" tabindex="-996" dir="auto">Cuhocuna jati hice ulbihmu.</title><base hidden dir="ltr" contenteditable="false"></base><progress tabindex="418" dir="auto" draggable="false" hidden>Lezenu bi ba vum.Omiwusleg dejof vop ja pil pevrunit fibzo.<small hidden draggable="true" tabindex="14"><q></q><kbd dir="auto" draggable="true" tabindex="-622"></kbd></small><wbr tabindex="492" hidden contenteditable=""></wbr>Upke sej.</progress></script><noscript><title contenteditable="" dir="ltr">Iliufo bu je di.</title><base></base><base draggable="true" dir="rtl"></base></noscript></head><body hidden><audio draggable="true" hidden preload="auto" contenteditable="true"></audio></body></html>',
-      '<html lang="7g3Sn"><head draggable="false" contenteditable="true" dir="auto" tabindex="62"><title contenteditable="false">Zibelre jo bief ra kil apparon sinle.</title></head><body dir="auto"><datalist tabindex="-365" contenteditable="true" hidden></datalist><h3 contenteditable="" tabindex="843" hidden dir="ltr"><samp tabindex="-491" hidden contenteditable="false" dir="auto"><noscript dir="auto" draggable="true" tabindex="114" contenteditable="true">Firu vu fo dil.<button tabindex="965" draggable="true" type="button"></button><embed src="Qd!5k963o7m9mn8" dir="rtl" contenteditable="true" tabindex="908" hidden title="RDY8HG"></embed><area shape="circle" draggable="false"></area></noscript><map dir="rtl" tabindex="66"><bdo tabindex="139" dir="auto"></bdo></map><small draggable="false" tabindex="151" hidden>Bewolzec devdopo pewo tisirse uwsemi taw.</small>Dog inu oro wozisa waewu.</samp><bdo contenteditable="false" tabindex="-124"><embed tabindex="-537" contenteditable="false" draggable="false" dir="rtl" src="J2^HRqcH^k" title="KmF"></embed>Zi haf guzfi cizpe cemet gitanu cesnim.<input capture type="email" autofocus required spellcheck="default" checked dir="auto" contenteditable="true"></input>Budwup reha bicanip wahus atuor.<code>Bowebaf tiritoke lijukis.</code></bdo><object draggable="false" data="ki#PK[%I7nFJbLt2" hidden><del tabindex="-823" contenteditable="true"></del>Jamol gabfejus sopan mijpibfu cazeceh orjon.<kbd draggable="true" dir="auto" hidden tabindex="-215"></kbd>Su pun to kawi vikha.</object></h3><meta contenteditable="" hidden tabindex="-590" dir="rtl"></meta></body></html>',
-      '<html contenteditable="false" lang="k6(ZHMngO(#42V74W1Z"><head draggable="true" tabindex="670" contenteditable="" dir="auto"><title draggable="true" dir="auto">Duk novelru tihi.</title><title>Rekmanam vespuk.</title><base tabindex="991" contenteditable="" dir="auto"></base></head><body><h6><b draggable="false" tabindex="-769"><math></math><datalist dir="auto" tabindex="-589"><wbr></wbr></datalist></b>Mo oz hanuvoni ufocekepe.</h6><template tabindex="-384" draggable="true" contenteditable=""><section draggable="true" hidden dir="rtl" contenteditable="false"><button tabindex="-748" type="submit"><svg contenteditable="true"></svg><template></template>Ahomoji be cimufvu eci pianevin wuavoed wehowdor.</button><img dir="auto" src="8" decoding="sync" crossorigin="use-credentials" tabindex="160" hidden></img></section><h5 draggable="true" hidden tabindex="-287" dir="rtl"><progress><a tabindex="18" hidden></a></progress></h5><object data="6*mY5f(wm05e0RJz" dir="rtl" tabindex="-45" hidden contenteditable="false"><style></style><noscript><param draggable="false"></param><param draggable="false" contenteditable="false" dir="auto" tabindex="298"></param><param contenteditable="" hidden draggable="true" tabindex="951"></param><div></div></noscript><nav hidden tabindex="965"><video contenteditable="false"></video><footer dir="rtl" draggable="false" hidden></footer><del></del>Fol zapfebozo nib dor re fa kenmez.</nav><math dir="ltr" contenteditable="false" draggable="false"><h4 draggable="true" tabindex="571" contenteditable=""></h4><svg hidden contenteditable="false"></svg><template dir="auto" contenteditable="true" tabindex="-33" draggable="true"></template><base dir="ltr"></base></math><aside draggable="false" contenteditable="" tabindex="-167" dir="ltr">Tuttuco ritnipra cosefiv kuko ako fi veh.<address draggable="true" hidden dir="rtl" tabindex="220"></address><object></object><map tabindex="-174"></map><time draggable="true" tabindex="371" hidden></time></aside></object><link contenteditable="false" hidden crossorigin="anonymous" draggable="true" href="S%6FWu]Rv^ApC"></link><script crossorigin="anonymous" integrity=")LnE@" src="sh#DGRMQAX" dir="ltr" contenteditable=""><h2><output></output></h2><noscript dir="ltr" tabindex="-169" contenteditable="true" draggable="true"><br draggable="false"></br><img decoding="async" draggable="false" dir="rtl" ismap contenteditable="true" src="07HR@#PpNict]ejN" tabindex="51" hidden></img></noscript><p contenteditable="" tabindex="-103" dir="rtl"></p></script></template><video contenteditable="" dir="ltr" hidden tabindex="323"><script contenteditable=""><time hidden><cite hidden></cite><ruby tabindex="-244" hidden dir="auto" draggable="false"></ruby><datalist hidden contenteditable="false"></datalist><cite hidden contenteditable="true" draggable="false"></cite></time></script><embed contenteditable="" dir="ltr" draggable="false" src="]#35gPv2i$WD4y&amp;XG7" title="7xG#8BivOWayyUBT"></embed><input multiple autofocus spellcheck="default" capture tabindex="643" required draggable="false" type="number"></input><iframe draggable="true" src="8ziClDMQsNJSD4O8310" hidden title="8oFa%Vf%(s">Ol date veami doweg.</iframe><button hidden autofocus contenteditable="" draggable="false" disabled type="reset" dir="ltr">Lamdubtum hoftakew ligzewu vodopni feevi dab.<cite hidden>Hesal jan mikwobuj dos igoja.</cite><var tabindex="-226" draggable="true" contenteditable="true"></var><bdi draggable="true" hidden><dfn draggable="true" tabindex="-333" hidden dir="auto"></dfn></bdi></button></video></body></html>'
-    ]);
+  '<html hidden lang="25SSlGlheH#ySk0Wbe)"><head><title contenteditable="" draggable="true" tabindex="-291" dir="rtl">Uj do.</title></head><body contenteditable="true" dir="ltr" hidden><canvas dir="ltr"></canvas><a hidden></a><video contenteditable="false" hidden dir="rtl" draggable="true"><embed hidden dir="auto" src="H*D%&amp;S1&amp;ygQoMd)y!" title="N9RA)uSOukv7mfb"></embed></video><title hidden dir="ltr">Woscujduv neclekos junla.</title><select multiple size="523" disabled autofocus hidden dir="rtl" required contenteditable="" draggable="true"><option>Riide rohu jod tuhdulhak retijic.</option><option dir="rtl">Ehfimif jeofhi.</option></select></body></html>',
+  '<html hidden dir="ltr" lang="sZK0wkv]ctT[LEdcuz^U"><head draggable="false" hidden><title dir="rtl" contenteditable="true" hidden>Ruav pa envewi logumem fojdewire guz regduw.</title></head><body tabindex="-349" hidden><section contenteditable="false" hidden tabindex="581" dir="rtl"></section><section hidden tabindex="-549" contenteditable="false" draggable="true">Towohram jeguze ipilip.<abbr hidden dir="auto"><abbr><var tabindex="-385" hidden></var><template dir="rtl"></template><a draggable="true"></a><i hidden tabindex="-615" dir="auto" contenteditable="true"></i><video hidden></video></abbr><area dir="auto" hidden tabindex="-553" draggable="true" contenteditable="false"></area></abbr><form method="post" dir="rtl" autocomplete="off">Cuvbe nibel uhu bebah demzef navgiro.</form></section><h5 contenteditable="true" draggable="false" tabindex="-41"><keygen contenteditable=""></keygen>Mor fune dof jozwom wibse daj ca.</h5><style><section contenteditable="true" dir="auto" tabindex="-346"><h6 tabindex="934" contenteditable="true" hidden><s hidden dir="rtl"></s><audio tabindex="906" preload="" draggable="true"></audio><u contenteditable="true"></u><output></output><strong hidden dir="rtl" contenteditable="false"></strong></h6><u>Tubokuhi zi usilesev egizosde pitkedeb iva.<bdo dir="auto"></bdo></u></section></style></body></html>',
+  '<html tabindex="-448" dir="ltr" hidden lang="OXp3(656ig&amp;K"><head><title dir="auto" draggable="false">Ecwemu famhuluj huwsojwa lirhu mi.</title><title contenteditable="true">Dod zorhukne rek buzbewru cemucite.</title></head><body dir="rtl" tabindex="-902" draggable="true"><u><input hidden disabled type="tel" contenteditable="true" required></input></u><svg dir="auto" contenteditable="false" hidden><h5></h5><time><strong><img crossorigin="" decoding="sync" contenteditable="false" draggable="false" ismap dir="auto" tabindex="1000" src="PR41*4!BsrHpjs(uSpq#"></img><sub hidden contenteditable="" dir="auto"></sub></strong><wbr draggable="false" hidden></wbr></time><h1 draggable="false" hidden dir="rtl" contenteditable="true"></h1><title contenteditable="true" dir="auto">Talonmik wem awjo.</title><script nomodule crossorigin="" integrity="[TKzypUQrz" src="IjRlDkZVnnZ" dir="rtl"><noscript contenteditable="" dir="ltr" tabindex="120" draggable="true"><h2 hidden></h2><math></math></noscript><label draggable="false" tabindex="-921" hidden></label><link href="7g3Sn["></link>Peplil cadfoivi bavliha lab efki.Kil apparon.</script></svg><h3 hidden draggable="true"><textarea maxlength="488" disabled hidden tabindex="186" autocomplete="on" minlength="806" rows="55" readonly cols="843" dir="ltr">Uzamiz buzpavuw.</textarea></h3><object hidden draggable="false" tabindex="-187" dir="ltr"><h2 contenteditable="true"><map contenteditable="" draggable="true">Silaw zukosofa ossav etgodfat tiw.Ser noiljis sejmem igrak.Wer av rosoz kog fafwolzec devdopo pewo.Son hijguw hikju inpa bosuc wowwo.</map><output><picture draggable="true" contenteditable="false" hidden tabindex="-124"></picture><b tabindex="-519"></b>Cogu semiewu kioli nu gi.<time contenteditable="true" dir="auto"></time></output><i hidden>Uzfi cizpe cemet gitanu cesnim.</i></h2><object draggable="true" data="y@f" dir="auto"><param draggable="false" hidden></param><param tabindex="-254" draggable="true" dir="auto"></param></object><bdo contenteditable="true" draggable="true"><datalist dir="rtl" hidden draggable="true" contenteditable="">Tiritoke lijukis nuhu.<option disabled tabindex="895" contenteditable="false" selected draggable="true" dir="rtl">Zitig tu.</option><code tabindex="272" contenteditable=""></code><option hidden contenteditable="true" tabindex="-652" draggable="false" dir="auto" disabled>Fe ishoppan.</option>Mepibfu cazeceh orjon moodoge jan elsajzic lopo.</datalist>Neac vubile oza vimciiso zostuz pof.Orcooza nuhdo guukalo elrubon racu kisciam.<picture hidden draggable="false"><source contenteditable="true" tabindex="933" draggable="true" hidden></source><script contenteditable="false" hidden src="D4gEyF" crossorigin="use-credentials" integrity="aiIAvv@v0rRdub^" draggable="true" defer dir="rtl" nomodule async></script><template dir="auto"></template><img src="6tgRE[$$*SI%T]m3]er"></img><img ismap crossorigin="" dir="rtl" hidden tabindex="-36" draggable="false" contenteditable="false" src="7eU)q$M&amp;S]MmtDM4K"></img></picture><sub contenteditable="true" hidden draggable="true" tabindex="537"><svg contenteditable="true"></svg><template></template>Ahomoji be cimufvu eci pianevin wuavoed wehowdor.</sub></bdo><small contenteditable="false" tabindex="-29" draggable="false"></small></object><h2>Ja undej rudah.<button contenteditable="" hidden draggable="false" tabindex="102" disabled dir="auto" type="submit">Cav uruzoso cakel hobfeuw.<canvas contenteditable="false" dir="auto">Udawumup zeuhku zebuwen.Ruge zanumbot bu tatpasa hinhi ti so.<data dir="rtl" hidden></data>Puwep ezoboldag sab tekis kam ijbu.</canvas><audio><button autofocus type="button" tabindex="124" dir="auto" contenteditable=""></button><code hidden contenteditable="false" dir="auto" draggable="false"></code></audio><map hidden tabindex="484" draggable="false"><output contenteditable="true" draggable="false" tabindex="219"></output><keygen dir="rtl" draggable="false"></keygen><area></area>Bop um tamoci hu.<b contenteditable="false" hidden></b></map></button><noscript hidden dir="auto"><svg dir="auto" tabindex="422" hidden><style tabindex="-210"></style></svg><output hidden tabindex="716">Min lonfo ukep.Zid higic.<mark contenteditable="false" dir="auto"></mark><svg draggable="false" contenteditable=""></svg><kbd contenteditable="true"></kbd></output>Vizuali rembecam cap na kasarmu.</noscript><mark tabindex="-639" draggable="false">Fe ofo.<map contenteditable="false" hidden tabindex="-444">Enoduvur opmop loun uv isose.<ruby contenteditable="" hidden dir="auto"></ruby><u tabindex="-436" hidden></u><a contenteditable=""></a>Ko mirli hijha sar zimru.</map><meter draggable="false" hidden dir="rtl" tabindex="-380"><datalist hidden></datalist><picture hidden draggable="true" tabindex="195" dir="ltr"></picture></meter></mark></h2></body></html>',
+  '<html contenteditable="false" hidden draggable="true" lang="*"><head><title dir="rtl" draggable="false">Wok mud dogom.</title><meta></meta></head><body dir="ltr" contenteditable="false" draggable="false"><audio draggable="true" contenteditable="true" preload="metadata"><select hidden multiple required disabled><optgroup tabindex="-767" disabled dir="ltr" draggable="true"><script draggable="false"></script><option hidden dir="rtl" draggable="true" contenteditable="true" selected tabindex="-547">Salug vok novaz.</option></optgroup></select>Dos igoja sakle tapu.<aside>Ka ujliznij raz.<map contenteditable="" draggable="false" hidden dir="rtl"></map><nav draggable="true" hidden><img contenteditable="false" src="4Ns!XMgUtg63@jT"></img><dfn hidden contenteditable=""></dfn><ul dir="rtl"></ul></nav><label contenteditable="true"><math tabindex="397" display="inline" draggable="false"></math><input multiple required capture type="date" checked></input><u></u><math draggable="false"></math><small hidden tabindex="-862"></small></label></aside><cite draggable="false" contenteditable="" dir="ltr"><strong contenteditable="" draggable="false">Bebsojla gifpu.<embed contenteditable="" hidden draggable="true" src="i5w" title="ZZ"></embed><svg draggable="true" tabindex="221" hidden></svg>Ekoav vali efloz ma boso.</strong><img dir="rtl" src="7e)dKBitOVHK!thlKjl@" hidden decoding="sync" ismap tabindex="652"></img>Mulaz ocvewaka ew it tipil tuni.</cite></audio><section contenteditable="true" tabindex="47" draggable="true" dir="ltr"><aside dir="rtl" tabindex="775" hidden>Zagba uwe hozvede zaumi uho.Ud supup.Ce sec milo jew giv.</aside>Jotev omtonu.Rofcahzug bodfoduz pa wizistec vasov farahos jafitgem.<keygen hidden tabindex="355" dir="auto"></keygen></section></body></html>',
+  '<html draggable="false" tabindex="-833" lang=""><head dir="rtl" hidden contenteditable="false"><title draggable="false">Saviva ta ajmi pocanro sisun ah.</title><base hidden contenteditable="true"></base><base hidden tabindex="517" draggable="true"></base></head><body contenteditable=""><blockquote contenteditable="true"><small hidden tabindex="173" draggable="false"><canvas hidden><code></code><iframe title="RuZM&amp;w5*et@F">Giniwwa copuk bochofe vizcece.</iframe><canvas></canvas></canvas><ins dir="ltr">Bacina kiscu.Viz iwe mog.<kbd hidden dir="ltr" draggable="false"></kbd><small></small>Kusuj ba meerriz ek corrocnu.</ins><slot draggable="false" contenteditable=""><svg></svg><q draggable="false"></q><dfn hidden dir="auto" contenteditable=""></dfn><math display="inline" tabindex="880"></math></slot></small></blockquote></body></html>'
+]);
   });
 
   describe("when given a tag", () => {
