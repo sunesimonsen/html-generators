@@ -108,6 +108,22 @@ class ElementGenerator extends Generator {
       return { type: "tag", tag, children: [], attributes };
     }
 
+    const excludedCategories = Array.from(excludedDescendants).filter(exclude =>
+      exclude.startsWith("@")
+    );
+
+    const isExcluded = tag => {
+      const element = elementsByTag[tag];
+
+      if (excludedDescendants.has(tag)) {
+        return true;
+      }
+
+      return excludedCategories.some(category =>
+        element.categories.has(category)
+      );
+    };
+
     const permittedOrder = element.transparent
       ? parentElement.permittedOrder
       : element.permittedOrder;
@@ -153,6 +169,7 @@ class ElementGenerator extends Generator {
       const index = chance.natural({ max: contentCandidates.length - 1 });
       const item = contentCandidates[index];
       if (excludedDescendants.has(item.value)) {
+        // Excludes categories and plain tags
         contentCandidates.splice(index, 1);
       } else if (item.category) {
         if (
@@ -163,10 +180,14 @@ class ElementGenerator extends Generator {
         } else {
           const possibleTags = elementsByCategory[item.value]
             .map(({ tag }) => tag)
-            .filter(tag => !excludedDescendants.has(tag));
+            // Excludes tags selected from a categories
+            .filter(tag => !isExcluded(tag));
 
           children.push(chance.pickone(possibleTags));
         }
+      } else if (isExcluded(item.value)) {
+        // Excludes plain tags that is part of an excluded category
+        contentCandidates.splice(index, 1);
       } else if (item.allowMultiple) {
         children.push(item.value);
       } else {
