@@ -25,294 +25,530 @@ describe("html", () => {
 
   it("generates random HTML trees", () => {
     expect(html.first(), "to equal snapshot", {
-  type: 'tag',
-  tag: 'html',
-  attributes: { hidden: null, lang: '25SSlGlheH#ySk0Wbe)' },
-  children: [
-    {
-      type: 'tag',
-      tag: 'head',
-      attributes: {},
+      type: "tag",
+      tag: "html",
+      attributes: { hidden: null, lang: "25SSlGlheH#ySk0Wbe)" },
       children: [
         {
-          type: 'tag',
-          tag: 'title',
-          attributes: { dir: 'ltr', draggable: 'true', tabindex: '612', style: 'clip: auto;' },
-          children: [ { type: 'text', value: 'Apli navvalbu rujbave.' } ]
-        }
-      ]
-    },
-    {
-      type: 'tag',
-      tag: 'body',
-      attributes: {
-        hidden: null,
-        contenteditable: '',
-        style: 'font-kerning: auto; border-inline-end-style: groove; right: -149.6883pt; border-left-style: double; margin-block-end: -937.3735vw;'
-      },
-      children: [
-        {
-          type: 'tag',
-          tag: 'blockquote',
-          attributes: { contenteditable: 'false', draggable: 'true' },
-          children: [ { type: 'tag', tag: 'meter', attributes: { tabindex: '-607' }, children: [] } ]
-        },
-        {
-          type: 'tag',
-          tag: 'noscript',
-          attributes: { tabindex: '-74' },
+          type: "tag",
+          tag: "head",
+          attributes: {},
           children: [
             {
-              type: 'tag',
-              tag: 'aside',
-              attributes: { style: 'border-inline-start-width: medium; padding-left: 79%; scrollbar-width: thin; background-size: contain; flex: auto;' },
+              type: "tag",
+              tag: "title",
+              attributes: {
+                dir: "ltr",
+                draggable: "true",
+                tabindex: "612",
+                style: "clip: auto;"
+              },
+              children: [{ type: "text", value: "Apli navvalbu rujbave." }]
+            }
+          ]
+        },
+        {
+          type: "tag",
+          tag: "body",
+          attributes: {
+            hidden: null,
+            contenteditable: "",
+            style:
+              "font-kerning: auto; border-inline-end-style: groove; right: -149.6883pt; border-left-style: double; margin-block-end: -937.3735vw;"
+          },
+          children: [
+            {
+              type: "tag",
+              tag: "blockquote",
+              attributes: { contenteditable: "false", draggable: "true" },
               children: [
                 {
-                  type: 'tag',
-                  tag: 'b',
-                  attributes: { draggable: 'true', tabindex: '-119', contenteditable: 'false' },
+                  type: "tag",
+                  tag: "meter",
+                  attributes: { tabindex: "-607" },
+                  children: []
+                }
+              ]
+            },
+            {
+              type: "tag",
+              tag: "noscript",
+              attributes: { tabindex: "-74" },
+              children: [
+                {
+                  type: "tag",
+                  tag: "aside",
+                  attributes: {
+                    style:
+                      "border-inline-start-width: medium; padding-left: 79%; scrollbar-width: thin; background-size: contain; flex: auto;"
+                  },
                   children: [
                     {
-                      type: 'tag',
-                      tag: 'data',
-                      attributes: { style: 'border-block-start-color: rgba(90% / 48%); column-rule-color: #8231b0; padding-block-end: 14%;' },
+                      type: "tag",
+                      tag: "b",
+                      attributes: {
+                        draggable: "true",
+                        tabindex: "-119",
+                        contenteditable: "false"
+                      },
+                      children: [
+                        {
+                          type: "tag",
+                          tag: "data",
+                          attributes: {
+                            style:
+                              "border-block-start-color: rgba(90% / 48%); column-rule-color: #8231b0; padding-block-end: 14%;"
+                          },
+                          children: []
+                        },
+                        {
+                          type: "text",
+                          value: "Zegcih iwahoil giimeduj deg bueh."
+                        },
+                        { type: "text", value: "Ril dej." },
+                        {
+                          type: "tag",
+                          tag: "kbd",
+                          attributes: { tabindex: "-323" },
+                          children: []
+                        }
+                      ]
+                    },
+                    {
+                      type: "tag",
+                      tag: "figure",
+                      attributes: {
+                        draggable: "false",
+                        dir: "ltr",
+                        contenteditable: ""
+                      },
+                      children: [
+                        {
+                          type: "tag",
+                          tag: "figcaption",
+                          attributes: {},
+                          children: []
+                        },
+                        {
+                          type: "text",
+                          value: "Caku vapiz soze wu tumit ede waser."
+                        }
+                      ]
+                    },
+                    {
+                      type: "tag",
+                      tag: "picture",
+                      attributes: { contenteditable: "false" },
+                      children: [
+                        {
+                          type: "tag",
+                          tag: "source",
+                          children: [],
+                          attributes: { dir: "rtl" }
+                        },
+                        {
+                          type: "tag",
+                          tag: "source",
+                          children: [],
+                          attributes: {
+                            contenteditable: "",
+                            draggable: "false",
+                            dir: "rtl",
+                            hidden: null
+                          }
+                        },
+                        {
+                          type: "tag",
+                          tag: "script",
+                          attributes: {
+                            draggable: "false",
+                            src: "%P",
+                            async: null,
+                            dir: "auto",
+                            integrity: "zuzZ1!%@$D5$V",
+                            crossorigin: "",
+                            nomodule: null
+                          },
+                          children: []
+                        },
+                        {
+                          type: "tag",
+                          tag: "img",
+                          children: [],
+                          attributes: {
+                            src: "vlwOJZHW]qn0brKyn3BW",
+                            crossorigin: "use-credentials",
+                            tabindex: "658",
+                            hidden: null,
+                            contenteditable: "true",
+                            dir: "rtl",
+                            decoding: "sync"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                { type: "text", value: "Heuze ipilip pufwi bop." }
+              ]
+            },
+            {
+              type: "tag",
+              tag: "title",
+              attributes: {
+                style:
+                  "transform-origin: bottom; break-inside: avoid-region; text-decoration-line: underline line-through overline; font-variant-ligatures: none; unicode-bidi: bidi-override;"
+              },
+              children: [
+                {
+                  type: "text",
+                  value: "Jeguki re wundevuj pe zuforre mug ocipogoc."
+                }
+              ]
+            },
+            {
+              type: "tag",
+              tag: "time",
+              attributes: { dir: "rtl", hidden: null, contenteditable: "" },
+              children: [
+                {
+                  type: "tag",
+                  tag: "object",
+                  attributes: { data: "c8wANj", dir: "rtl", hidden: null },
+                  children: [
+                    {
+                      type: "text",
+                      value: "Fodumobo miceb cuk maffigra vutuwom."
+                    },
+                    {
+                      type: "tag",
+                      tag: "label",
+                      attributes: { hidden: null, draggable: "false" },
                       children: []
                     },
-                    { type: 'text', value: 'Zegcih iwahoil giimeduj deg bueh.' },
-                    { type: 'text', value: 'Ril dej.' },
-                    { type: 'tag', tag: 'kbd', attributes: { tabindex: '-323' }, children: [] }
-                  ]
-                },
-                {
-                  type: 'tag',
-                  tag: 'figure',
-                  attributes: { draggable: 'false', dir: 'ltr', contenteditable: '' },
-                  children: [
-                    { type: 'tag', tag: 'figcaption', attributes: {}, children: [] },
-                    { type: 'text', value: 'Caku vapiz soze wu tumit ede waser.' }
-                  ]
-                },
-                {
-                  type: 'tag',
-                  tag: 'picture',
-                  attributes: { contenteditable: 'false' },
-                  children: [
-                    { type: 'tag', tag: 'source', children: [], attributes: { dir: 'rtl' } },
                     {
-                      type: 'tag',
-                      tag: 'source',
+                      type: "tag",
+                      tag: "area",
                       children: [],
-                      attributes: { contenteditable: '', draggable: 'false', dir: 'rtl', hidden: null }
+                      attributes: {
+                        contenteditable: "",
+                        shape: "rect",
+                        dir: "ltr",
+                        tabindex: "980",
+                        style:
+                          "animation: running; scroll-margin-top: -53.0565mm; border-inline-style: solid;"
+                      }
                     },
                     {
-                      type: 'tag',
-                      tag: 'script',
+                      type: "tag",
+                      tag: "ins",
+                      attributes: { hidden: null, dir: "rtl" },
+                      children: []
+                    }
+                  ]
+                },
+                { type: "text", value: "Tupum foctub tutvendit." },
+                {
+                  type: "tag",
+                  tag: "button",
+                  attributes: {
+                    disabled: null,
+                    type: "submit",
+                    hidden: null,
+                    dir: "ltr"
+                  },
+                  children: []
+                }
+              ]
+            },
+            {
+              type: "tag",
+              tag: "h1",
+              attributes: {
+                contenteditable: "true",
+                style: "border-block-end: floralwhite thin;"
+              },
+              children: [
+                { type: "text", value: "Azrazi usilesev." },
+                {
+                  type: "tag",
+                  tag: "del",
+                  attributes: {
+                    draggable: "false",
+                    hidden: null,
+                    contenteditable: "false",
+                    tabindex: "238"
+                  },
+                  children: [
+                    {
+                      type: "tag",
+                      tag: "mark",
                       attributes: {
-                        draggable: 'false', src: '%P', async: null, dir: 'auto', integrity: 'zuzZ1!%@$D5$V', crossorigin: '',
-                        nomodule: null
+                        contenteditable: "false",
+                        dir: "auto",
+                        tabindex: "-574",
+                        hidden: null
                       },
                       children: []
                     },
                     {
-                      type: 'tag',
-                      tag: 'img',
+                      type: "tag",
+                      tag: "embed",
                       children: [],
                       attributes: {
-                        src: 'vlwOJZHW]qn0brKyn3BW', crossorigin: 'use-credentials', tabindex: '658', hidden: null,
-                        contenteditable: 'true', dir: 'rtl', decoding: 'sync'
+                        contenteditable: "",
+                        dir: "auto",
+                        src: "56ig&K[e]OeG2$Oz0i)",
+                        title: "9T#h!gFZqfD8%0",
+                        style:
+                          "border-block-color: rgba(1464668166029312 , 6541722049839104); flex-grow: 6851956031094784; scroll-padding-block: auto;"
+                      }
+                    },
+                    {
+                      type: "tag",
+                      tag: "bdi",
+                      attributes: {
+                        tabindex: "-708",
+                        hidden: null,
+                        dir: "rtl",
+                        draggable: "false"
+                      },
+                      children: [
+                        {
+                          type: "tag",
+                          tag: "datalist",
+                          attributes: {},
+                          children: []
+                        },
+                        {
+                          type: "tag",
+                          tag: "bdo",
+                          attributes: {
+                            contenteditable: "false",
+                            draggable: "false"
+                          },
+                          children: []
+                        },
+                        {
+                          type: "tag",
+                          tag: "datalist",
+                          attributes: {
+                            draggable: "true",
+                            contenteditable: "",
+                            tabindex: "-869"
+                          },
+                          children: []
+                        }
+                      ]
+                    },
+                    {
+                      type: "text",
+                      value: "Uzbewru cemucite nuwijwaw ocu doja nej jaj."
+                    },
+                    {
+                      type: "tag",
+                      tag: "textarea",
+                      attributes: {
+                        tabindex: "-823",
+                        spellcheck: "false",
+                        autofocus: null,
+                        maxlength: "417",
+                        contenteditable: "true",
+                        autocomplete: "off",
+                        draggable: "false",
+                        required: null,
+                        hidden: null,
+                        minlength: "418",
+                        cols: "933",
+                        rows: "866",
+                        dir: "ltr",
+                        readonly: null,
+                        disabled: null,
+                        style: "font-style: italic;"
+                      },
+                      children: [
+                        {
+                          type: "text",
+                          value: "Udezek enunafe cu rusomiwus hegaog huzob."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  type: "tag",
+                  tag: "bdo",
+                  attributes: {
+                    dir: "ltr",
+                    style:
+                      "image-orientation: -47.5786turn; scroll-padding-inline-end: 704.363vmax; list-style: outside 'pazo' none; min-width: min-content;"
+                  },
+                  children: [
+                    {
+                      type: "tag",
+                      tag: "br",
+                      children: [],
+                      attributes: {
+                        draggable: "false",
+                        contenteditable: "true"
+                      }
+                    },
+                    { type: "text", value: "Joerufiw zenatij ti ci di fo." },
+                    {
+                      type: "tag",
+                      tag: "picture",
+                      attributes: {
+                        contenteditable: "false",
+                        tabindex: "474",
+                        draggable: "false"
+                      },
+                      children: [
+                        {
+                          type: "tag",
+                          tag: "script",
+                          attributes: {
+                            draggable: "true",
+                            contenteditable: "true"
+                          },
+                          children: []
+                        }
+                      ]
+                    },
+                    {
+                      type: "tag",
+                      tag: "input",
+                      children: [],
+                      attributes: {
+                        spellcheck: "true",
+                        autofocus: null,
+                        dir: "ltr",
+                        type: "url"
                       }
                     }
                   ]
-                }
-              ]
-            },
-            { type: 'text', value: 'Heuze ipilip pufwi bop.' }
-          ]
-        },
-        {
-          type: 'tag',
-          tag: 'title',
-          attributes: { style: 'transform-origin: bottom; break-inside: avoid-region; text-decoration-line: underline line-through overline; font-variant-ligatures: none; unicode-bidi: bidi-override;' },
-          children: [ { type: 'text', value: 'Jeguki re wundevuj pe zuforre mug ocipogoc.' } ]
-        },
-        {
-          type: 'tag',
-          tag: 'time',
-          attributes: { dir: 'rtl', hidden: null, contenteditable: '' },
-          children: [
-            {
-              type: 'tag',
-              tag: 'object',
-              attributes: { data: 'c8wANj', dir: 'rtl', hidden: null },
-              children: [
-                { type: 'text', value: 'Fodumobo miceb cuk maffigra vutuwom.' },
-                { type: 'tag', tag: 'label', attributes: { hidden: null, draggable: 'false' }, children: [] },
-                {
-                  type: 'tag',
-                  tag: 'area',
-                  children: [],
-                  attributes: {
-                    contenteditable: '',
-                    shape: 'rect',
-                    dir: 'ltr',
-                    tabindex: '980',
-                    style: 'animation: running; scroll-margin-top: -53.0565mm; border-inline-style: solid;'
-                  }
-                },
-                { type: 'tag', tag: 'ins', attributes: { hidden: null, dir: 'rtl' }, children: [] }
-              ]
-            },
-            { type: 'text', value: 'Tupum foctub tutvendit.' },
-            {
-              type: 'tag',
-              tag: 'button',
-              attributes: { disabled: null, type: 'submit', hidden: null, dir: 'ltr' },
-              children: []
-            }
-          ]
-        },
-        {
-          type: 'tag',
-          tag: 'h1',
-          attributes: { contenteditable: 'true', style: 'border-block-end: floralwhite thin;' },
-          children: [
-            { type: 'text', value: 'Azrazi usilesev.' },
-            {
-              type: 'tag',
-              tag: 'del',
-              attributes: { draggable: 'false', hidden: null, contenteditable: 'false', tabindex: '238' },
-              children: [
-                {
-                  type: 'tag',
-                  tag: 'mark',
-                  attributes: { contenteditable: 'false', dir: 'auto', tabindex: '-574', hidden: null },
-                  children: []
                 },
                 {
-                  type: 'tag',
-                  tag: 'embed',
-                  children: [],
-                  attributes: {
-                    contenteditable: '',
-                    dir: 'auto',
-                    src: '56ig&K[e]OeG2$Oz0i)',
-                    title: '9T#h!gFZqfD8%0',
-                    style: 'border-block-color: rgba(1464668166029312 , 6541722049839104); flex-grow: 6851956031094784; scroll-padding-block: auto;'
-                  }
-                },
-                {
-                  type: 'tag',
-                  tag: 'bdi',
-                  attributes: { tabindex: '-708', hidden: null, dir: 'rtl', draggable: 'false' },
+                  type: "tag",
+                  tag: "iframe",
+                  attributes: { title: "" },
                   children: [
-                    { type: 'tag', tag: 'datalist', attributes: {}, children: [] },
-                    { type: 'tag', tag: 'bdo', attributes: { contenteditable: 'false', draggable: 'false' }, children: [] },
                     {
-                      type: 'tag',
-                      tag: 'datalist',
-                      attributes: { draggable: 'true', contenteditable: '', tabindex: '-869' },
-                      children: []
-                    }
-                  ]
-                },
-                { type: 'text', value: 'Uzbewru cemucite nuwijwaw ocu doja nej jaj.' },
-                {
-                  type: 'tag',
-                  tag: 'textarea',
-                  attributes: {
-                    tabindex: '-823', spellcheck: 'false', autofocus: null, maxlength: '417', contenteditable: 'true',
-                    autocomplete: 'off', draggable: 'false', required: null, hidden: null, minlength: '418', cols: '933',
-                    rows: '866', dir: 'ltr', readonly: null, disabled: null, style: 'font-style: italic;'
-                  },
-                  children: [ { type: 'text', value: 'Udezek enunafe cu rusomiwus hegaog huzob.' } ]
-                }
-              ]
-            },
-            {
-              type: 'tag',
-              tag: 'bdo',
-              attributes: {
-                dir: 'ltr',
-                style: 'image-orientation: -47.5786turn; scroll-padding-inline-end: 704.363vmax; list-style: outside \'pazo\' none; min-width: min-content;'
-              },
-              children: [
-                { type: 'tag', tag: 'br', children: [], attributes: { draggable: 'false', contenteditable: 'true' } },
-                { type: 'text', value: 'Joerufiw zenatij ti ci di fo.' },
-                {
-                  type: 'tag',
-                  tag: 'picture',
-                  attributes: { contenteditable: 'false', tabindex: '474', draggable: 'false' },
-                  children: [
-                    { type: 'tag', tag: 'script', attributes: { draggable: 'true', contenteditable: 'true' }, children: [] }
-                  ]
-                },
-                {
-                  type: 'tag',
-                  tag: 'input',
-                  children: [],
-                  attributes: { spellcheck: 'true', autofocus: null, dir: 'ltr', type: 'url' }
-                }
-              ]
-            },
-            {
-              type: 'tag',
-              tag: 'iframe',
-              attributes: { title: '' },
-              children: [ { type: 'text', value: 'Uflul zem zabha iviracnem delab efki.' } ]
-            },
-            {
-              type: 'tag',
-              tag: 'template',
-              attributes: {},
-              children: [
-                { type: 'tag', tag: 'h4', attributes: { hidden: null, draggable: 'true' }, children: [] },
-                {
-                  type: 'tag',
-                  tag: 'label',
-                  attributes: { dir: 'rtl' },
-                  children: [
-                    { type: 'tag', tag: 'object', attributes: { contenteditable: 'true' }, children: [] },
-                    { type: 'tag', tag: 'mark', attributes: {}, children: [] },
-                    { type: 'tag', tag: 'picture', attributes: {}, children: [] },
-                    { type: 'text', value: 'Eca moudu uwuaz.' },
-                    { type: 'text', value: 'Woori nevgaz mam.' }
-                  ]
-                },
-                {
-                  type: 'tag',
-                  tag: 'h5',
-                  attributes: { dir: 'auto', draggable: 'true', contenteditable: '' },
-                  children: [
-                    { type: 'tag', tag: 'map', attributes: { contenteditable: '', draggable: 'true' }, children: [] },
-                    { type: 'tag', tag: 'output', attributes: {}, children: [] },
-                    {
-                      type: 'tag', tag: 'i', attributes: { contenteditable: 'true', hidden: null, tabindex: '412' },
-                      children: []
+                      type: "text",
+                      value: "Uflul zem zabha iviracnem delab efki."
                     }
                   ]
                 },
                 {
-                  type: 'tag',
-                  tag: 'map',
-                  attributes: { tabindex: '-933', hidden: null, draggable: 'false', dir: 'auto' },
+                  type: "tag",
+                  tag: "template",
+                  attributes: {},
                   children: [
                     {
-                      type: 'tag',
-                      tag: 'h1',
-                      attributes: { hidden: null, draggable: 'false', dir: 'ltr', contenteditable: 'false' },
+                      type: "tag",
+                      tag: "h4",
+                      attributes: { hidden: null, draggable: "true" },
+                      children: []
+                    },
+                    {
+                      type: "tag",
+                      tag: "label",
+                      attributes: { dir: "rtl" },
+                      children: [
+                        {
+                          type: "tag",
+                          tag: "object",
+                          attributes: { contenteditable: "true" },
+                          children: []
+                        },
+                        {
+                          type: "tag",
+                          tag: "mark",
+                          attributes: {},
+                          children: []
+                        },
+                        {
+                          type: "tag",
+                          tag: "picture",
+                          attributes: {},
+                          children: []
+                        },
+                        { type: "text", value: "Eca moudu uwuaz." },
+                        { type: "text", value: "Woori nevgaz mam." }
+                      ]
+                    },
+                    {
+                      type: "tag",
+                      tag: "h5",
+                      attributes: {
+                        dir: "auto",
+                        draggable: "true",
+                        contenteditable: ""
+                      },
+                      children: [
+                        {
+                          type: "tag",
+                          tag: "map",
+                          attributes: {
+                            contenteditable: "",
+                            draggable: "true"
+                          },
+                          children: []
+                        },
+                        {
+                          type: "tag",
+                          tag: "output",
+                          attributes: {},
+                          children: []
+                        },
+                        {
+                          type: "tag",
+                          tag: "i",
+                          attributes: {
+                            contenteditable: "true",
+                            hidden: null,
+                            tabindex: "412"
+                          },
+                          children: []
+                        }
+                      ]
+                    },
+                    {
+                      type: "tag",
+                      tag: "map",
+                      attributes: {
+                        tabindex: "-933",
+                        hidden: null,
+                        draggable: "false",
+                        dir: "auto"
+                      },
+                      children: [
+                        {
+                          type: "tag",
+                          tag: "h1",
+                          attributes: {
+                            hidden: null,
+                            draggable: "false",
+                            dir: "ltr",
+                            contenteditable: "false"
+                          },
+                          children: []
+                        }
+                      ]
+                    },
+                    {
+                      type: "tag",
+                      tag: "math",
+                      attributes: { display: "block" },
                       children: []
                     }
                   ]
-                },
-                { type: 'tag', tag: 'math', attributes: { display: 'block' }, children: [] }
+                }
               ]
             }
           ]
         }
       ]
-    }
-  ]
-});
+    });
   });
 });
 
