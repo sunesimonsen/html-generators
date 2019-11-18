@@ -5,6 +5,8 @@ const {
   elementsByTag
 } = require("./elements");
 
+const { declarationList } = require("css-generators");
+
 const Generator = require("chance-generators/lib/Generator");
 
 const generateTextFromRegep = (chance, regex) => {
@@ -103,6 +105,9 @@ class ElementGenerator extends Generator {
       },
       {}
     );
+    if (chance.bool({ likelihood: 20 })) {
+      attributes.style = declarationList.generate(chance);
+    }
 
     if (element.void) {
       return { type: "tag", tag, children: [], attributes };
