@@ -5,7 +5,7 @@ const {
   elementsByTag
 } = require("./elements");
 
-const { declarationList } = require("css-generators");
+const { declarationList, stylesheet } = require("css-generators");
 
 const Generator = require("chance-generators/lib/Generator");
 
@@ -109,7 +109,15 @@ class ElementGenerator extends Generator {
       attributes.style = declarationList.generate(chance);
     }
 
-    if (element.void) {
+    if (tag === "style") {
+      return {
+        type: "tag",
+        tag,
+        children: [{ type: "text", value: stylesheet.generate(chance) }],
+        attributes
+      };
+    }
+    if (element.void || tag === "style") {
       return { type: "tag", tag, children: [], attributes };
     }
 
