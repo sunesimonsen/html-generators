@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "chance-generators": "3.5.1",
+    "css-generators": "github:papandreou/css-generators",
     "html-validate": "1.6.0"
   },
   "nyc": {
