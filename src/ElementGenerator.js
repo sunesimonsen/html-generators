@@ -117,7 +117,7 @@ class ElementGenerator extends Generator {
         attributes
       };
     }
-    if (element.void || tag === "style") {
+    if (element.void) {
       return { type: "tag", tag, children: [], attributes };
     }
 
