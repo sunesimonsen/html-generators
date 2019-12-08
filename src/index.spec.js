@@ -1,21 +1,6 @@
-const { HtmlValidate } = require("html-validate");
-const htmlValidator = new HtmlValidate();
-
-const expect = require("unexpected")
-  .clone()
-  .use(require("unexpected-snapshot"))
-  .use(require("unexpected-check"))
-  .addAssertion("<string> to be valid html", (expect, html) => {
-    expect.errorMode = "bubble";
-    const validationResult = htmlValidator.validateString(html);
-    if (!validationResult.valid) {
-      const messages = validationResult.results.map(({ messages }) => messages);
-      expect.fail("Invalid: {0}", messages);
-    }
-  });
-
 const chanceCache = require("chance-generators/lib/chanceCache");
 
+const expect = require("../test/expect");
 const { html, htmlString } = require("./index");
 
 describe("html", () => {
