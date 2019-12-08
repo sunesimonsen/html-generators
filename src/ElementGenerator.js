@@ -6,6 +6,7 @@ const {
 } = require("./elements");
 
 const Generator = require("chance-generators/lib/Generator");
+const { constant } = require("chance-generators");
 
 const generateTextFromRegep = (chance, regex) => {
   switch (regex) {
@@ -33,6 +34,7 @@ class ElementGenerator extends Generator {
     minChildren = 0,
     maxChildren = 5,
     maxDepth = 5,
+    maxAttributes = 5,
     name = "element",
     parentTag,
     tag = "html"
@@ -40,6 +42,7 @@ class ElementGenerator extends Generator {
     super(name, {
       tag,
       parentTag,
+      maxAttributes,
       minChildren,
       maxChildren,
       maxDepth,
@@ -62,10 +65,25 @@ class ElementGenerator extends Generator {
     this.options.parentElement = parentTag && elementsByTag[parentTag];
   }
 
+  shrink(value) {
+    const { maxAttributes, minChildren, maxChildren, maxDepth } = this.options;
+    if (maxAttributes === 0 && maxDepth === 0 && minChildren === maxChildren) {
+      return constant(value);
+    }
+
+    return new ElementGenerator({
+      ...this.options,
+      maxAttributes: Math.max(0, maxAttributes - 1),
+      maxChildren: Math.max(minChildren, maxChildren - 1),
+      maxDepth: Math.max(0, maxDepth - 1)
+    });
+  }
+
   generate(chance) {
     const {
       element,
       excludedDescendants,
+      maxAttributes,
       minChildren,
       maxChildren,
       maxDepth,
@@ -74,14 +92,26 @@ class ElementGenerator extends Generator {
     } = this.options;
 
     const possibleElementAttributes = Object.keys(element.attributes);
-    const attributeNames = new Set(
-      chance.pickset(
-        possibleElementAttributes,
-        chance.natural({ max: possibleElementAttributes.length - 1 })
+    const requiredAttributes = element.requiredAttributes || [];
+    const maxExtraAttributes = Math.max(
+      0,
+      Math.min(
+        maxAttributes - requiredAttributes.length,
+        possibleElementAttributes.length - 1
       )
     );
+    const attributeNames = new Set(
+      maxExtraAttributes === 0
+        ? []
+        : chance.pickset(
+            possibleElementAttributes,
+            chance.natural({
+              max: maxExtraAttributes
+            })
+          )
+    );
 
-    (element.requiredAttributes || []).forEach(attribute => {
+    requiredAttributes.forEach(attribute => {
       attributeNames.add(attribute);
     });
 
@@ -260,6 +290,7 @@ class ElementGenerator extends Generator {
           : new ElementGenerator({
               parentTag: tag,
               tag: child,
+              maxAttributes,
               minChildren,
               maxChildren,
               maxDepth: maxDepth - 1,
