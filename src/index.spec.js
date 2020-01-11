@@ -507,7 +507,7 @@ describe("html", () => {
     expect(html, "to shrink towards", {
       type: "tag",
       tag: "html",
-      attributes: { lang: "zh&!93)E" },
+      attributes: { lang: "%^8Uzyt9" },
       children: [
         {
           type: "tag",
@@ -518,7 +518,12 @@ describe("html", () => {
               type: "tag",
               tag: "title",
               attributes: {},
-              children: [{ type: "text", value: "Ossav etgodfat tiw." }]
+              children: [
+                {
+                  type: "text",
+                  value: "Nuhu zadsiznof bizi meftuud fogbuw anja."
+                }
+              ]
             }
           ]
         },
