@@ -4,7 +4,7 @@ const escapeHtml = str =>
     .replace(/"/g, "&quot;")
     .replace(/</g, "&lt;");
 
-const stringify = ({ type, tag, value, attributes, children }) => {
+const stringify = ({ type, tag, value, attributes, children }, isCdata) => {
   if (type === "tag") {
     const stringifiedAttributes = Object.keys(attributes)
       .map(attributeName =>
@@ -14,11 +14,15 @@ const stringify = ({ type, tag, value, attributes, children }) => {
       )
       .join("");
     return `<${tag}${stringifiedAttributes}>${children
-      .map(stringify)
+      .map(child => stringify(child, tag === "script" || tag === "style"))
       .join("")}</${tag}>`;
   } else {
     // type === 'text'
-    return escapeHtml(value);
+    if (isCdata) {
+      return value;
+    } else {
+      return escapeHtml(value);
+    }
   }
 };
 
