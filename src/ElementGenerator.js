@@ -147,10 +147,18 @@ class ElementGenerator extends Generator {
         attributes
       };
     } else if (tag === "script") {
+      if (chance.bool()) {
+        delete attributes.src;
+      } else {
+        attributes.src = chance.url();
+      }
+
       return {
         type: "tag",
         tag,
-        children: [{ type: "text", value: 'console.log("hello")' }],
+        children: attributes.src
+          ? []
+          : [{ type: "text", value: 'console.log("hello")' }],
         attributes
       };
     }
