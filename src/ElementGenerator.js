@@ -146,7 +146,15 @@ class ElementGenerator extends Generator {
         children: [{ type: "text", value: stylesheet.generate(chance) }],
         attributes
       };
+    } else if (tag === "script") {
+      return {
+        type: "tag",
+        tag,
+        children: [{ type: "text", value: 'console.log("hello")' }],
+        attributes
+      };
     }
+
     if (element.void) {
       return { type: "tag", tag, children: [], attributes };
     }

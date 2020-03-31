@@ -165,16 +165,18 @@ describe("ElementGenerator", () => {
                           {
                             type: "tag",
                             tag: "script",
-                            attributes: {},
-                            children: []
+                            children: [
+                              { type: "text", value: 'console.log("hello")' }
+                            ],
+                            attributes: {}
                           },
                           {
                             type: "tag",
                             tag: "b",
                             attributes: {
-                              tabindex: "-878",
-                              dir: "auto",
-                              contenteditable: "false"
+                              hidden: null,
+                              tabindex: "295",
+                              dir: "ltr"
                             },
                             children: []
                           }
@@ -184,115 +186,99 @@ describe("ElementGenerator", () => {
                         type: "tag",
                         tag: "cite",
                         attributes: {
-                          hidden: null,
-                          dir: "auto",
-                          tabindex: "-810"
+                          contenteditable: "",
+                          draggable: "true",
+                          hidden: null
                         },
                         children: [
-                          { type: "text", value: "Wecuv lini kiruen." },
-                          {
-                            type: "text",
-                            value: "Ba likizef navgiro waumo ak no ba."
-                          },
+                          { type: "text", value: "Pogoc abijasa." },
                           {
                             type: "tag",
-                            tag: "span",
+                            tag: "textarea",
                             attributes: {
-                              contenteditable: "true",
-                              hidden: null,
-                              dir: "ltr",
-                              draggable: "true"
+                              maxlength: "823",
+                              minlength: "360",
+                              style:
+                                "list-style-position: outside; resize: both;"
                             },
-                            children: []
+                            children: [
+                              {
+                                type: "text",
+                                value:
+                                  "Cugi wodfuz katji cebuc wocafig dof jozwom."
+                              }
+                            ]
                           }
                         ]
                       },
-                      { type: "text", value: "Ra vutuwom wibse daj." }
+                      { type: "text", value: "Maglas ka da ura." }
                     ]
                   },
                   {
                     type: "tag",
                     tag: "area",
                     children: [],
-                    attributes: { style: "border-block-end-style: none;" }
+                    attributes: { contenteditable: "true", shape: "rect" }
                   }
                 ]
               },
               {
                 type: "tag",
                 tag: "samp",
-                attributes: { tabindex: "704" },
+                attributes: { hidden: null, dir: "rtl" },
                 children: []
               },
               {
                 type: "tag",
                 tag: "audio",
-                attributes: {},
+                attributes: { draggable: "true" },
                 children: [
                   {
                     type: "tag",
-                    tag: "iframe",
-                    attributes: {
-                      draggable: "true",
-                      contenteditable: "",
-                      src: "U*LL@NWY",
-                      title: "*V*b#RV*7QYC"
-                    },
-                    children: [
-                      { type: "text", value: "Awoazifa ga bavec lubet." }
-                    ]
-                  },
-                  {
-                    type: "tag",
-                    tag: "kbd",
-                    attributes: {
-                      dir: "rtl",
-                      style:
-                        "overscroll-behavior-inline: none; mix-blend-mode: color; text-align-last: auto; page-break-after: avoid;"
-                    },
+                    tag: "sup",
+                    attributes: { tabindex: "643", hidden: null, dir: "rtl" },
                     children: [
                       {
-                        type: "text",
-                        value: "Lesev egizosde pitkedeb iva uzoli cicse."
-                      },
-                      {
-                        type: "text",
-                        value: "Zuzodol umnorer fos ecumoce waccezluj."
+                        type: "tag",
+                        tag: "progress",
+                        attributes: {},
+                        children: []
                       },
                       {
                         type: "tag",
-                        tag: "object",
+                        tag: "u",
                         attributes: {
-                          tabindex: "350",
-                          dir: "auto",
-                          hidden: null,
-                          draggable: "true",
-                          data: "BP0Fs^yiGK",
-                          style:
-                            "image-orientation: -887.3935rad; border-bottom-right-radius: 11%; scroll-padding: 75%;"
+                          contenteditable: "true",
+                          style: "border-block-end-style: groove;"
                         },
                         children: [
-                          { type: "text", value: "Aburah ruocevuc tejiz." },
+                          { type: "text", value: "Votu wiuhimo susde." },
                           {
                             type: "tag",
-                            tag: "img",
+                            tag: "input",
                             children: [],
-                            attributes: {
-                              decoding: "auto",
-                              tabindex: "-891",
-                              draggable: "true",
-                              src: "yum"
-                            }
-                          },
-                          {
-                            type: "text",
-                            value: "Hice ulbihmu jadcuw wiokaivi."
+                            attributes: { readonly: null, type: "radio" }
                           },
                           {
                             type: "tag",
-                            tag: "meter",
+                            tag: "abbr",
                             attributes: {
-                              style: "font-variant-position: sub;"
+                              tabindex: "751",
+                              draggable: "false",
+                              hidden: null,
+                              contenteditable: "",
+                              style:
+                                "text-emphasis-color: #815838; isolation: isolate;"
+                            },
+                            children: []
+                          },
+                          {
+                            type: "tag",
+                            tag: "del",
+                            attributes: {
+                              dir: "auto",
+                              style:
+                                "background-clip: border-box; transition-duration: 810.764s;"
                             },
                             children: []
                           }
@@ -300,42 +286,550 @@ describe("ElementGenerator", () => {
                       },
                       {
                         type: "tag",
+                        tag: "code",
+                        attributes: { dir: "auto" },
+                        children: [
+                          {
+                            type: "tag",
+                            tag: "object",
+                            attributes: {
+                              tabindex: "113",
+                              dir: "auto",
+                              hidden: null
+                            },
+                            children: []
+                          },
+                          {
+                            type: "tag",
+                            tag: "bdi",
+                            attributes: {},
+                            children: []
+                          },
+                          { type: "text", value: "Imedud epuecwe." },
+                          {
+                            type: "tag",
+                            tag: "i",
+                            attributes: {},
+                            children: []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    type: "tag",
+                    tag: "s",
+                    attributes: {
+                      hidden: null,
+                      contenteditable: "",
+                      tabindex: "581",
+                      dir: "auto"
+                    },
+                    children: [
+                      {
+                        type: "text",
+                        value: "Hudiha sadod zorhukne rek buzbewru."
+                      },
+                      {
+                        type: "tag",
                         tag: "wbr",
                         children: [],
                         attributes: {
+                          tabindex: "75",
+                          contenteditable: "",
+                          hidden: null,
+                          dir: "rtl"
+                        }
+                      },
+                      {
+                        type: "tag",
+                        tag: "iframe",
+                        attributes: {
+                          dir: "rtl",
                           draggable: "false",
                           hidden: null,
-                          tabindex: "381",
-                          contenteditable: "false"
-                        }
+                          title: "^u((e$DHhTyumnV"
+                        },
+                        children: [
+                          { type: "text", value: "Cehul remuved cuw." }
+                        ]
+                      },
+                      {
+                        type: "tag",
+                        tag: "bdi",
+                        attributes: {
+                          draggable: "true",
+                          tabindex: "-933",
+                          dir: "auto",
+                          hidden: null
+                        },
+                        children: []
+                      },
+                      {
+                        type: "tag",
+                        tag: "input",
+                        children: [],
+                        attributes: { type: "button" }
+                      }
+                    ]
+                  },
+                  {
+                    type: "tag",
+                    tag: "b",
+                    attributes: { hidden: null },
+                    children: [
+                      {
+                        type: "tag",
+                        tag: "button",
+                        attributes: { hidden: null, type: "button" },
+                        children: [
+                          {
+                            type: "tag",
+                            tag: "b",
+                            attributes: {
+                              hidden: null,
+                              tabindex: "914",
+                              dir: "rtl",
+                              draggable: "false"
+                            },
+                            children: []
+                          },
+                          {
+                            type: "text",
+                            value: "Hegaog huzob dapil pevrunit fibzo wuffob."
+                          },
+                          {
+                            type: "text",
+                            value: "Soknaw riawjo wutnu zenatij ti ci di."
+                          },
+                          { type: "text", value: "Wogo ivpo." },
+                          {
+                            type: "text",
+                            value: "Geb kegara lelam kac topuoj ju ziuflul."
+                          }
+                        ]
+                      },
+                      {
+                        type: "tag",
+                        tag: "select",
+                        attributes: { disabled: null },
+                        children: [
+                          {
+                            type: "tag",
+                            tag: "script",
+                            children: [
+                              { type: "text", value: 'console.log("hello")' }
+                            ],
+                            attributes: {
+                              integrity: "ch#HANDrht2BnbP",
+                              contenteditable: "false",
+                              nomodule: null,
+                              dir: "ltr",
+                              style:
+                                "margin-block-end: -533.5672vmin; flex-direction: column;"
+                            }
+                          },
+                          {
+                            type: "tag",
+                            tag: "optgroup",
+                            attributes: { tabindex: "-584", dir: "auto" },
+                            children: []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    type: "tag",
+                    tag: "u",
+                    attributes: { draggable: "true", dir: "rtl", hidden: null },
+                    children: [
+                      {
+                        type: "tag",
+                        tag: "object",
+                        attributes: { contenteditable: "true" },
+                        children: [
+                          {
+                            type: "tag",
+                            tag: "cite",
+                            attributes: {
+                              contenteditable: "",
+                              tabindex: "18",
+                              draggable: "false",
+                              dir: "auto"
+                            },
+                            children: []
+                          },
+                          {
+                            type: "text",
+                            value:
+                              "Uwuaz fo orisihzef wipora zecpawki lefi ufe."
+                          }
+                        ]
+                      },
+                      {
+                        type: "tag",
+                        tag: "mark",
+                        attributes: {
+                          tabindex: "-760",
+                          contenteditable: "true",
+                          hidden: null
+                        },
+                        children: [
+                          {
+                            type: "tag",
+                            tag: "span",
+                            attributes: {
+                              tabindex: "-933",
+                              hidden: null,
+                              draggable: "false",
+                              dir: "auto"
+                            },
+                            children: []
+                          },
+                          { type: "text", value: "Zon zat godfatvo levmot." }
+                        ]
+                      },
+                      {
+                        type: "tag",
+                        tag: "picture",
+                        attributes: { draggable: "false", tabindex: "-540" },
+                        children: [
+                          {
+                            type: "tag",
+                            tag: "script",
+                            children: [
+                              { type: "text", value: 'console.log("hello")' }
+                            ],
+                            attributes: {
+                              async: null,
+                              src: "yZkm6$TKN2%Q6",
+                              style:
+                                "contain: content; box-decoration-break: clone; paint-order: normal; animation-play-state: running;"
+                            }
+                          },
+                          {
+                            type: "tag",
+                            tag: "source",
+                            children: [],
+                            attributes: { hidden: null, tabindex: "-103" }
+                          },
+                          {
+                            type: "tag",
+                            tag: "img",
+                            children: [],
+                            attributes: { src: "HjSDL6Nl" }
+                          }
+                        ]
+                      },
+                      { type: "text", value: "Wapvimhij uwsemi taw pahas." },
+                      {
+                        type: "text",
+                        value: "Diwawa fonsaco ewu defuf ohu hin cogu."
+                      }
+                    ]
+                  },
+                  {
+                    type: "tag",
+                    tag: "output",
+                    attributes: {
+                      contenteditable: "true",
+                      draggable: "false",
+                      dir: "auto"
+                    },
+                    children: [
+                      {
+                        type: "tag",
+                        tag: "iframe",
+                        attributes: { title: "mFc^xA5QuUqa" },
+                        children: [
+                          { type: "text", value: "Nanecufi kak golelta." }
+                        ]
+                      },
+                      {
+                        type: "tag",
+                        tag: "textarea",
+                        attributes: {
+                          cols: "560",
+                          required: null,
+                          style:
+                            "border-inline-start-color: hsl(8036501640183808 , 76% , 37%);"
+                        },
+                        children: [
+                          {
+                            type: "text",
+                            value: "Mubfur mamhevi det iphoc usetumur me cap."
+                          }
+                        ]
+                      },
+                      {
+                        type: "tag",
+                        tag: "data",
+                        attributes: {},
+                        children: [{ type: "text", value: "Sok itokelen." }]
+                      },
+                      {
+                        type: "tag",
+                        tag: "textarea",
+                        attributes: {},
+                        children: [
+                          {
+                            type: "text",
+                            value: "Zinu oz favpuwaf bizi meftuud."
+                          }
+                        ]
+                      },
+                      {
+                        type: "text",
+                        value: "Vebuwdun citi gabfejus sopan mijpibfu."
                       }
                     ]
                   }
                 ]
               },
-              {
-                type: "text",
-                value: "Cibfe cu rusomiwus hegaog huzob dapil pevrunit."
-              },
-              { type: "text", value: "Pazo wuffob simikis pitmep." }
+              { type: "text", value: "Do cejijwoh oleowa geresu pun to." },
+              { type: "text", value: "Ce posilcu boz sa." }
             ]
           },
           {
             type: "tag",
             tag: "select",
-            attributes: { required: null, disabled: null, multiple: null },
-            children: []
+            attributes: {
+              hidden: null,
+              contenteditable: "true",
+              style: "margin-inline: auto;"
+            },
+            children: [
+              {
+                type: "tag",
+                tag: "template",
+                attributes: { hidden: null, draggable: "true", dir: "auto" },
+                children: [
+                  {
+                    type: "tag",
+                    tag: "video",
+                    attributes: {},
+                    children: [
+                      {
+                        type: "tag",
+                        tag: "title",
+                        attributes: { contenteditable: "" },
+                        children: [{ type: "text", value: "Duk novelru tihi." }]
+                      },
+                      {
+                        type: "tag",
+                        tag: "math",
+                        attributes: {},
+                        children: []
+                      },
+                      {
+                        type: "tag",
+                        tag: "textarea",
+                        attributes: {
+                          readonly: null,
+                          cols: "626",
+                          tabindex: "427",
+                          autocomplete: "off",
+                          disabled: null
+                        },
+                        children: [{ type: "text", value: "Ubagij aculadib." }]
+                      }
+                    ]
+                  },
+                  {
+                    type: "tag",
+                    tag: "video",
+                    attributes: { draggable: "true", hidden: null },
+                    children: []
+                  },
+                  { type: "text", value: "Rohac jejog jaubi mo." }
+                ]
+              },
+              {
+                type: "tag",
+                tag: "script",
+                children: [{ type: "text", value: 'console.log("hello")' }],
+                attributes: {}
+              },
+              {
+                type: "tag",
+                tag: "script",
+                children: [{ type: "text", value: 'console.log("hello")' }],
+                attributes: {
+                  src: "%T]m3]erD*9Wr",
+                  defer: null,
+                  nomodule: null,
+                  draggable: "false",
+                  contenteditable: "true",
+                  style:
+                    "background: space left 93% bottom -479.5333mm / contain fixed border-box lightslategrey repeat-x; mask-origin: view-box;"
+                }
+              },
+              {
+                type: "tag",
+                tag: "template",
+                attributes: { tabindex: "-273", contenteditable: "true" },
+                children: []
+              },
+              {
+                type: "tag",
+                tag: "template",
+                attributes: {
+                  tabindex: "932",
+                  hidden: null,
+                  contenteditable: "false",
+                  dir: "ltr"
+                },
+                children: [
+                  {
+                    type: "tag",
+                    tag: "a",
+                    attributes: {},
+                    children: [
+                      {
+                        type: "tag",
+                        tag: "svg",
+                        attributes: {
+                          tabindex: "593",
+                          contenteditable: "false",
+                          dir: "rtl",
+                          draggable: "true"
+                        },
+                        children: [
+                          {
+                            type: "tag",
+                            tag: "del",
+                            attributes: {
+                              dir: "auto",
+                              hidden: null,
+                              contenteditable: "true"
+                            },
+                            children: []
+                          },
+                          {
+                            type: "tag",
+                            tag: "section",
+                            attributes: {
+                              tabindex: "189",
+                              draggable: "false",
+                              contenteditable: "false"
+                            },
+                            children: []
+                          },
+                          {
+                            type: "tag",
+                            tag: "svg",
+                            attributes: {
+                              contenteditable: "false",
+                              hidden: null
+                            },
+                            children: []
+                          }
+                        ]
+                      },
+                      {
+                        type: "text",
+                        value: "Buesiba te tagtaata za uvmo zat."
+                      },
+                      {
+                        type: "tag",
+                        tag: "bdi",
+                        attributes: {
+                          contenteditable: "",
+                          draggable: "true",
+                          hidden: null,
+                          tabindex: "771"
+                        },
+                        children: [
+                          {
+                            type: "tag",
+                            tag: "b",
+                            attributes: {
+                              tabindex: "130",
+                              draggable: "false",
+                              hidden: null,
+                              contenteditable: "true",
+                              style: "animation-duration: 643.0259ms;"
+                            },
+                            children: []
+                          },
+                          { type: "text", value: "Hobfeuw nuro jevzova oza." },
+                          {
+                            type: "tag",
+                            tag: "svg",
+                            attributes: {},
+                            children: []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    type: "tag",
+                    tag: "s",
+                    attributes: {
+                      tabindex: "-760",
+                      dir: "rtl",
+                      draggable: "false",
+                      hidden: null
+                    },
+                    children: [
+                      {
+                        type: "tag",
+                        tag: "script",
+                        children: [
+                          { type: "text", value: 'console.log("hello")' }
+                        ],
+                        attributes: { contenteditable: "false" }
+                      },
+                      {
+                        type: "tag",
+                        tag: "code",
+                        attributes: {
+                          dir: "rtl",
+                          draggable: "false",
+                          hidden: null,
+                          style: "border-right: thick solid currentcolor;"
+                        },
+                        children: [
+                          {
+                            type: "text",
+                            value: "Tatpasa hinhi ti so ulbi mel wepzuzibo."
+                          },
+                          {
+                            type: "tag",
+                            tag: "br",
+                            children: [],
+                            attributes: {
+                              hidden: null,
+                              contenteditable: "false"
+                            }
+                          },
+                          { type: "text", value: "Po kis." }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
       {
         type: "tag",
         tag: "code",
-        attributes: { contenteditable: "", hidden: null },
+        attributes: {},
         children: [
-          { type: "text", value: "Fid garmunir sabuke badil." },
-          { type: "text", value: "Lam kac topuoj ju." },
-          { type: "text", value: "Saz lul zem zabha iviracnem delab." }
+          {
+            type: "tag",
+            tag: "meter",
+            attributes: {},
+            children: [
+              { type: "text", value: "Fugor gafdupwu opa joworo." },
+              { type: "text", value: "Tucorin nipranas hod tehnes ako fi." }
+            ]
+          }
         ]
       }
     ]);
@@ -1948,27 +2442,34 @@ describe("ElementGenerator", () => {
                             {
                               type: "tag",
                               tag: "script",
+                              children: [
+                                { type: "text", value: 'console.log("hello")' }
+                              ],
                               attributes: {
                                 defer: null,
                                 style:
                                   "background-repeat: repeat-x; caption-side: bottom; background: fixed center center / contain local;"
-                              },
-                              children: []
+                              }
                             },
                             {
                               type: "tag",
                               tag: "tr",
                               attributes: {
-                                dir: "ltr",
-                                draggable: "false",
-                                tabindex: "-531"
+                                hidden: null,
+                                dir: "auto",
+                                tabindex: "-626",
+                                contenteditable: "true"
                               },
                               children: []
                             },
                             {
                               type: "tag",
                               tag: "tfoot",
-                              attributes: { contenteditable: "true" },
+                              attributes: {
+                                dir: "auto",
+                                contenteditable: "false",
+                                tabindex: "573"
+                              },
                               children: []
                             }
                           ]
@@ -1979,10 +2480,9 @@ describe("ElementGenerator", () => {
                       type: "tag",
                       tag: "dt",
                       attributes: {
-                        hidden: null,
-                        tabindex: "-252",
-                        dir: "ltr",
-                        draggable: "false"
+                        tabindex: "-599",
+                        style:
+                          "border-block-end-color: #e8dd4d; animation-name: 'ona', 'kuno', none, naopiaro; border-top-style: groove; line-break: auto;"
                       },
                       children: []
                     }
@@ -1991,58 +2491,390 @@ describe("ElementGenerator", () => {
                 {
                   type: "tag",
                   tag: "pre",
-                  attributes: {
-                    contenteditable: "false",
-                    draggable: "false",
-                    hidden: null,
-                    style:
-                      "transition-duration: 143.5447ms; list-style: outside 'fojfif' none; transform-style: preserve-3d; grid-row-start: pac -53%; font-stretch: extra-expanded;"
-                  },
+                  attributes: { dir: "auto" },
                   children: [
+                    {
+                      type: "text",
+                      value: "La cudji kitati gi bubhu dej nifmeb."
+                    },
+                    {
+                      type: "text",
+                      value: "Ac adi pivpo ulogme muwwen juozubup we."
+                    },
+                    {
+                      type: "tag",
+                      tag: "select",
+                      attributes: {
+                        contenteditable: "true",
+                        size: "663",
+                        tabindex: "-121",
+                        disabled: null
+                      },
+                      children: [
+                        {
+                          type: "tag",
+                          tag: "template",
+                          attributes: { contenteditable: "true", dir: "auto" },
+                          children: [
+                            {
+                              type: "tag",
+                              tag: "template",
+                              attributes: {},
+                              children: []
+                            },
+                            {
+                              type: "tag",
+                              tag: "a",
+                              attributes: {
+                                contenteditable: "false",
+                                draggable: "false",
+                                dir: "ltr",
+                                tabindex: "534",
+                                style:
+                                  "all: unset; grid-area: -3%  / 82% ; scroll-margin-inline-start: 117.2848ex; flex-direction: row-reverse; padding-left: 65%;"
+                              },
+                              children: []
+                            },
+                            {
+                              type: "tag",
+                              tag: "label",
+                              attributes: {
+                                dir: "auto",
+                                draggable: "true",
+                                hidden: null,
+                                contenteditable: ""
+                              },
+                              children: []
+                            },
+                            {
+                              type: "tag",
+                              tag: "video",
+                              attributes: {
+                                tabindex: "450",
+                                draggable: "false",
+                                dir: "auto",
+                                contenteditable: "false",
+                                hidden: null
+                              },
+                              children: []
+                            }
+                          ]
+                        },
+                        {
+                          type: "tag",
+                          tag: "template",
+                          attributes: { tabindex: "12" },
+                          children: [
+                            {
+                              type: "tag",
+                              tag: "picture",
+                              attributes: {
+                                contenteditable: "",
+                                tabindex: "762"
+                              },
+                              children: []
+                            },
+                            {
+                              type: "tag",
+                              tag: "h5",
+                              attributes: { contenteditable: "true" },
+                              children: []
+                            },
+                            {
+                              type: "tag",
+                              tag: "iframe",
+                              attributes: {
+                                contenteditable: "true",
+                                dir: "ltr",
+                                tabindex: "-677",
+                                title: "A!qQ]PHhYmk)"
+                              },
+                              children: [
+                                {
+                                  type: "text",
+                                  value: "Udebe lid koni iv oj ik emujo."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          type: "tag",
+                          tag: "option",
+                          attributes: {
+                            dir: "rtl",
+                            draggable: "false",
+                            contenteditable: "",
+                            selected: null,
+                            disabled: null
+                          },
+                          children: [
+                            { type: "text", value: "Zeeke hof pe hurijsi nap." }
+                          ]
+                        }
+                      ]
+                    },
                     {
                       type: "tag",
                       tag: "del",
                       attributes: {
                         draggable: "false",
-                        tabindex: "-71",
-                        hidden: null
+                        contenteditable: "false",
+                        dir: "ltr",
+                        tabindex: "326"
                       },
-                      children: []
+                      children: [
+                        {
+                          type: "text",
+                          value: "Hazino nubzo cojiv udu ucieli pe."
+                        },
+                        {
+                          type: "tag",
+                          tag: "button",
+                          attributes: {
+                            dir: "rtl",
+                            hidden: null,
+                            type: "reset"
+                          },
+                          children: [
+                            {
+                              type: "tag",
+                              tag: "wbr",
+                              children: [],
+                              attributes: {
+                                draggable: "false",
+                                contenteditable: "",
+                                tabindex: "-640",
+                                hidden: null
+                              }
+                            },
+                            {
+                              type: "tag",
+                              tag: "mark",
+                              attributes: {
+                                dir: "rtl",
+                                contenteditable: "",
+                                hidden: null,
+                                tabindex: "972"
+                              },
+                              children: []
+                            },
+                            {
+                              type: "tag",
+                              tag: "span",
+                              attributes: {
+                                contenteditable: "",
+                                hidden: null,
+                                dir: "auto"
+                              },
+                              children: []
+                            },
+                            {
+                              type: "tag",
+                              tag: "strong",
+                              attributes: {
+                                contenteditable: "false",
+                                draggable: "false"
+                              },
+                              children: []
+                            }
+                          ]
+                        },
+                        {
+                          type: "tag",
+                          tag: "map",
+                          attributes: {
+                            dir: "auto",
+                            draggable: "false",
+                            hidden: null
+                          },
+                          children: [
+                            {
+                              type: "tag",
+                              tag: "template",
+                              attributes: {
+                                tabindex: "741",
+                                style:
+                                  "place-content: safe flex-start safe right;"
+                              },
+                              children: []
+                            },
+                            {
+                              type: "tag",
+                              tag: "embed",
+                              children: [],
+                              attributes: { src: "K1", title: "YEbew" }
+                            },
+                            {
+                              type: "tag",
+                              tag: "audio",
+                              attributes: {},
+                              children: []
+                            },
+                            {
+                              type: "tag",
+                              tag: "picture",
+                              attributes: {
+                                tabindex: "-523",
+                                draggable: "true"
+                              },
+                              children: []
+                            }
+                          ]
+                        }
+                      ]
                     },
-                    { type: "text", value: "Sa heulni noji pib." }
+                    {
+                      type: "tag",
+                      tag: "audio",
+                      attributes: {},
+                      children: [
+                        { type: "text", value: "Muodju si roubgek." },
+                        {
+                          type: "tag",
+                          tag: "area",
+                          children: [],
+                          attributes: {
+                            tabindex: "449",
+                            contenteditable: "true",
+                            shape: "default"
+                          }
+                        },
+                        {
+                          type: "text",
+                          value: "Vig huhjin fuwek juap jokagi."
+                        },
+                        {
+                          type: "tag",
+                          tag: "ruby",
+                          attributes: {
+                            contenteditable: "false",
+                            draggable: "true",
+                            tabindex: "840",
+                            style:
+                              "box-decoration-break: clone; page-break-inside: auto;"
+                          },
+                          children: [
+                            {
+                              type: "tag",
+                              tag: "rtc",
+                              attributes: {},
+                              children: []
+                            }
+                          ]
+                        },
+                        { type: "text", value: "Eve iwumu." }
+                      ]
+                    }
                   ]
                 },
                 {
                   type: "tag",
                   tag: "label",
-                  attributes: {
-                    contenteditable: "false",
-                    tabindex: "-285",
-                    hidden: null,
-                    dir: "rtl"
-                  },
+                  attributes: { dir: "auto" },
                   children: [
-                    { type: "text", value: "Mujodij subvoul." },
+                    {
+                      type: "text",
+                      value: "Fawuguh oroheno ubapu ekide zecu mimurlo."
+                    },
+                    {
+                      type: "text",
+                      value: "Ipevon ma dosupmo gicebva zijavbej ebdukpo rujas."
+                    },
                     {
                       type: "tag",
-                      tag: "dfn",
+                      tag: "img",
+                      children: [],
+                      attributes: { ismap: null, src: "5qMj[@jQbf4C7Bin" }
+                    },
+                    {
+                      type: "tag",
+                      tag: "sup",
                       attributes: {},
                       children: [
                         {
                           type: "tag",
-                          tag: "input",
-                          children: [],
+                          tag: "select",
                           attributes: {
-                            multiple: null,
-                            autofocus: null,
-                            type: "text"
-                          }
+                            draggable: "false",
+                            hidden: null,
+                            autofocus: null
+                          },
+                          children: [
+                            {
+                              type: "tag",
+                              tag: "template",
+                              attributes: {
+                                hidden: null,
+                                draggable: "true",
+                                tabindex: "-152",
+                                contenteditable: "false",
+                                style:
+                                  "border-top-color: ButtonShadow; mask-type: luminance; inline-size: fit-content; background-image: none;"
+                              },
+                              children: []
+                            },
+                            {
+                              type: "tag",
+                              tag: "script",
+                              children: [
+                                { type: "text", value: 'console.log("hello")' }
+                              ],
+                              attributes: {}
+                            },
+                            {
+                              type: "tag",
+                              tag: "option",
+                              attributes: {
+                                selected: null,
+                                disabled: null,
+                                dir: "rtl",
+                                hidden: null,
+                                tabindex: "963",
+                                style:
+                                  "font-feature-settings: normal; border-top: thick groove currentcolor; scale: none; mask-border-width: 963.3067vmax;"
+                              },
+                              children: [
+                                {
+                                  type: "text",
+                                  value: "Fohujoje ruwova ponamu zej vucjut."
+                                }
+                              ]
+                            },
+                            {
+                              type: "tag",
+                              tag: "script",
+                              children: [
+                                { type: "text", value: 'console.log("hello")' }
+                              ],
+                              attributes: {
+                                async: null,
+                                src: "%dX!k[]6N@",
+                                tabindex: "-659",
+                                dir: "ltr",
+                                style:
+                                  "transition: 962.2875s 139.0796ms; break-before: left; grid-column-start: 25% span; all: revert;"
+                              }
+                            },
+                            {
+                              type: "tag",
+                              tag: "template",
+                              attributes: {
+                                style:
+                                  "scroll-margin: 464.2452vmin; flex-wrap: wrap-reverse; overscroll-behavior-inline: auto; font-variant-alternates: annotation(kegnotun) ornaments(eloeblew) character-variant(aphu) historical-forms stylistic(em) swash(dekbiip) styleset(ih); border-image-width: 8828611251404800;"
+                              },
+                              children: []
+                            }
+                          ]
                         }
                       ]
                     }
                   ]
                 },
-                { type: "text", value: "Barecsu doallad." }
+                {
+                  type: "text",
+                  value: "Cipepdo cuk louge liphuf ucaefoha fujezso simzu."
+                }
               ]
             }
           ]
