@@ -1,6 +1,6 @@
 {
   "name": "html-generators",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "HTML random generators",
   "main": "./src/index.js",
   "scripts": {
