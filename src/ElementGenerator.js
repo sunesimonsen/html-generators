@@ -1,5 +1,4 @@
 const {
-  categories,
   categoryField,
   elementsByCategory,
   elementsByTag
@@ -180,7 +179,7 @@ class ElementGenerator extends Generator {
     const permittedContent = (
       (element.transparent
         ? parentElement && parentElement.permittedContent
-        : element.permittedContent) || categories
+        : element.permittedContent) || []
     ).map(item => {
       const allowMultiple = !item.endsWith("?");
       const value = allowMultiple ? item : item.slice(0, -1);
