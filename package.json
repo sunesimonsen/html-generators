@@ -32,7 +32,7 @@
     "prettier": "1.18.2",
     "unexpected": "11.8.0",
     "unexpected-check": "^2.4.1",
-    "unexpected-snapshot": "^0.7.0"
+    "unexpected-snapshot": "^2.2.0"
   },
   "dependencies": {
     "chance-generators": "^3.5.2",
